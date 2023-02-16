@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/Greedy_algorithm
+https://dev.to/brandonskerritt/a-free-ebook-on-greedy-algorithms-divide-conquer-and-dynamic-programming-1712
+https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/

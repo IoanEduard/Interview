@@ -1,0 +1,3 @@
+https://louisabraham.github.io/articles/suffix-arrays
+https://cp-algorithms.com/string/suffix-array.html
+https://www.enjoyalgorithms.com/blog/product-of-array-except-self

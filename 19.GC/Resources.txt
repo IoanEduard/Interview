@@ -1,0 +1,25 @@
+https://en.m.wikipedia.org/wiki/Weak_reference
+https://en.m.wikipedia.org/wiki/Garbage_collection_(computer_science)
+https://www.youtube.com/watch?v=0mUjVCPeWi0
+https://stackoverflow.com/questions/75345204/garbage-collector-i-need-a-guide
+https://en.m.wikipedia.org/wiki/Weak_reference
+
+https://en.m.wikipedia.org/wiki/Garbage_collection_(computer_science)
+
+https://www.youtube.com/watch?v=0mUjVCPeWi0
+.NET devs take it for granted, its a managed code
+
+What is GC
+GC is the processing of cleaning up unused memory inside a .NET process
+The CLR (Common Language Runtime) allocates memory into the managed heap when an object is created
+Since memory is a finite resource, hence it needs to be freed up at some point in time based on availability. That is where the phenomenon of GC happens.
+
+Garbage Collection
+- is the component responsible for automatic memory management inside the CLR
+Developers does not have to manange memory
+Memory allocation is efficient 
+Provides more safety in terms of making sure one object cannot use content of another
+Finds out and cleans unused memory automatically
+
+The mananged Heap
+The CLR  does memory allocation in a contiguous memory space of the process, which is known as the mananged heap

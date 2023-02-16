@@ -1,0 +1,1 @@
+﻿https://en.m.wikipedia.org/wiki/Observer_pattern

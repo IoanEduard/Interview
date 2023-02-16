@@ -1,0 +1,109 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "1.Main/1.0.0": {
+        "dependencies": {
+          "0.Tests": "1.0.0",
+          "2.Printer": "1.0.0",
+          "3.SortingAlgorithms": "1.0.0",
+          "4.SlidingWindow": "1.0.0",
+          "_LeetCode_Easy": "1.0.0",
+          "_LeetCode_Medium": "1.0.0"
+        },
+        "runtime": {
+          "1.Main.dll": {}
+        }
+      },
+      "0.Tests/1.0.0": {
+        "dependencies": {
+          "2.Printer": "1.0.0",
+          "3.SortingAlgorithms": "1.0.0",
+          "4.SlidingWindow": "1.0.0"
+        },
+        "runtime": {
+          "0.Tests.dll": {}
+        }
+      },
+      "2.Printer/1.0.0": {
+        "runtime": {
+          "2.Printer.dll": {}
+        }
+      },
+      "3.SortingAlgorithms/1.0.0": {
+        "runtime": {
+          "3.SortingAlgorithms.dll": {}
+        }
+      },
+      "4.SlidingWindow/1.0.0": {
+        "runtime": {
+          "4.SlidingWindow.dll": {}
+        }
+      },
+      "_ExtensionMethods/1.0.0": {
+        "runtime": {
+          "_ExtensionMethods.dll": {}
+        }
+      },
+      "_LeetCode_Easy/1.0.0": {
+        "dependencies": {
+          "_ExtensionMethods": "1.0.0"
+        },
+        "runtime": {
+          "_LeetCode_Easy.dll": {}
+        }
+      },
+      "_LeetCode_Medium/1.0.0": {
+        "runtime": {
+          "_LeetCode_Medium.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "1.Main/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "0.Tests/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "2.Printer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "3.SortingAlgorithms/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "4.SlidingWindow/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "_ExtensionMethods/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "_LeetCode_Easy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "_LeetCode_Medium/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\2.Printer\2.Printer.csproj" />
+    <ProjectReference Include="..\3.SortingAlgorithms\3.SortingAlgorithms.csproj" />
+    <ProjectReference Include="..\4.SlidingWindow\4.SlidingWindow.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>_0.Tests</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

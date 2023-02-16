@@ -1,0 +1,2 @@
+https://blog.bitsrc.io/keep-it-simple-with-the-strategy-design-pattern-c36a14c985e9
+https://www.dofactory.com/net/strategy-design-pattern

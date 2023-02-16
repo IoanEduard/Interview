@@ -1,0 +1,7 @@
+https://www.youtube.com/watch?v=jgQjes7MgTM
+https://neetcode.io/roadmap
+https://www.geeksforgeeks.org/managed-code-and-unmanaged-code-in-net/
+https://www.youtube.com/watch?v=TIwmHGK29RY
+https://medium.com/outco/the-algorithm-of-an-algorithm-28043fe47b51
+
+Data Structures : https://www.youtube.com/watch?v=RBSGKlAvoiM&list=PLWKjhJtqVAblfum5WiQblKPwIbqYXkDoC

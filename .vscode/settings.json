@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true
+    },
+    "workbench.colorCustomizations": {
+        "[GitHub Dark Dimmed]": {
+            "iconDefinitions": {
+                "_root_folder_dark": {
+                    "iconPath": "./images/root-folder-dark.svg"
+                },
+            },
+        }
+    }
+}

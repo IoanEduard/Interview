@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\0.TESTS\0.Tests.csproj" />
+    <ProjectReference Include="..\2.Printer\2.Printer.csproj" />
+    <ProjectReference Include="..\3.SortingAlgorithms\3.SortingAlgorithms.csproj" />
+    <ProjectReference Include="..\4.SlidingWindow\4.SlidingWindow.csproj" />
+    <ProjectReference Include="..\_LeetCode_Medium\_LeetCode_Medium.csproj" />
+    <ProjectReference Include="..\_LeetCode_Easy\_LeetCode_Easy.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>_1.Main</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
