@@ -1,0 +1,9 @@
+Binary Tree
+https://www.youtube.com/watch?v=fAAZixBzIAI
+
+Terminology:
+Parent, Child, Nodes, Root (No parent), Leaf (No Children)
+Binary tree has two children or 1
+Exactly 1 path between root and any node, one single path guarenteed
+Edge cases: Empty trees, one node, two nodes still considered a binary tree
+            Cycle within the structure is not a binary tree

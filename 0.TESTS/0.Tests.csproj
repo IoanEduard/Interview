@@ -4,13 +4,15 @@
     <ProjectReference Include="..\2.Printer\2.Printer.csproj" />
     <ProjectReference Include="..\3.SortingAlgorithms\3.SortingAlgorithms.csproj" />
     <ProjectReference Include="..\4.SlidingWindow\4.SlidingWindow.csproj" />
+    <ProjectReference Include="..\14.Trees\14.Trees.csproj" />
+    <ProjectReference Include="..\15.DynamicProgramming\15.DynamicProgramming.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>_0.Tests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
 </Project>

@@ -1,7 +1,9 @@
 ﻿
 using _1.Main.StaticCalls.SlidingWindow;
 using _1.Main.StaticCalls.SortingAlgorithms;
-using _LeetCode_Easy;
+using _1.Main.StaticCalls.Trees;
+using _LeetCode_Easy.Concrete;
+using _LeetCode_Easy.Concrete.LowAcceptanceRate;
 
 var quickSortTests = new QuickSortTestsRunner();
 // quickSortTests.RunQuickSortTests();
@@ -19,3 +21,14 @@ var slidingWindowTests = new SlidingWindowTestsRunner();
 //  }, 2));
 
 // Migrate everything on this project
+
+var easy = new _Easy();
+// System.Console.WriteLine(easy.IsAnagram("anagram", "nagaram"));
+// System.Console.WriteLine(easy.IsAnagram("aacc", "ccac"));
+// System.Console.WriteLine(easy.AlternateDigitSum(886996));
+
+var binaryTreeTets = new BinaryTreesTestRunner();
+binaryTreeTets.RunBinaryTreesTests();
+
+var low = new LowAcceptanceRate();
+// System.Console.WriteLine(low.Reverse(321));

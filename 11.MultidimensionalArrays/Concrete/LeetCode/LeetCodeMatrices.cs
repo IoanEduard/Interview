@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace _11.MultidimensionalArrays.Concrete.LeetCode
 {
-    public class LeetCodeMatrices
+    public class LeetCodeMatrices : LeetCodeCodeMatricesPrivateMethods
     {
         public static int[][] LargestLocal(int[][] grid)
         {
@@ -205,7 +205,7 @@ namespace _11.MultidimensionalArrays.Concrete.LeetCode
             return max;
         }
 
-        public static int[][] ReverseMatrix(int[][] image)
+        public static int[][] Reverse(int[][] image)
         {
             for (int i = 0; i < image.Length; i++)
             {
@@ -230,5 +230,58 @@ namespace _11.MultidimensionalArrays.Concrete.LeetCode
 
             return image;
         }
+
+        /*
+            1 2 3    Transpose   1 4 7
+            4 5 6    ----------> 2 5 8 Reverse rows  
+            7 8 9                3 6 9
+        
+        */
+
+        public void Rotate(int[][] matrix)
+        {
+            for (var i = 0; i < matrix.Length; i++)
+            {
+                for (var j = i; j < matrix[0].Length; j++)
+                {
+                    var temp = matrix[i][j];
+                    matrix[i][j] = matrix[j][i];
+                    matrix[j][i] = temp;
+                }
+            }
+
+            for (var i = 0; i < matrix.Length; i++)
+            {
+                for (var j = i; j < matrix[0].Length; j++)
+                {
+                    var temp = matrix[i][j];
+                    matrix[i][j] = matrix[i][matrix.Length - 1 - j];
+                    matrix[i][matrix.Length - 1 - j] = temp;
+                }
+            }
+        }
+
+        // Rotate matrix 360 and check after each rotation if matches the target
+        public bool FindRotation(int[][] matrix, int[][] target)
+        {
+            if (MatrixIsEqual(matrix, target))
+                return true;
+
+            var count = 0;
+            while (count < 4)
+            {
+                TransposeMatrix(matrix);
+                base.ReverseMatrix(matrix);
+
+                if (MatrixIsEqual(matrix, target))
+                    return true;
+
+                count++;
+            }
+
+            return false;
+        }
+
+
     }
 }

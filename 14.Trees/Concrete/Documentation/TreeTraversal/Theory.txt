@@ -1,0 +1,21 @@
+Preorder, Inorder, Postorder are a type of DSF
+
+1. https://stackoverflow.com/questions/21571745/is-pre-order-traversal-on-a-binary-tree-same-as-depth-first-search
+2. https://medium.com/basecs/demystifying-depth-first-search-a7c14cccf056
+3. https://brilliant.org/wiki/traversals/
+4. https://en.wikipedia.org/wiki/Tree_traversal#
+5. https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+6. https://www.javatpoint.com/inorder-traversal
+7. https://www.youtube.com/watch?v=-b2lciNd2L4
+8. BEST https://faculty.cs.niu.edu/~mcmahon/CS241/Notes/Data_Structures/binary_tree_traversals.html
+9. / https://xlinux.nist.gov/dads/HTML/inorderTraversal.html
+10. bad https://www.interviewkickstart.com/learn/tree-traversals-inorder-preorder-and-postorder
+11. / https://www.geeksforgeeks.org/dfs-traversal-of-a-tree-using-recursion/
+12. https://www.geeksforgeeks.org/level-order-tree-traversal/?ref=lbp
+13. / https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal.htm
+14. / https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal_in_c.htm
+
+
+Videos:
+1. https://www.youtube.com/watch?v=8v6qxmcEly8
+2. https://www.youtube.com/watch?v=-b2lciNd2L4&t=1s

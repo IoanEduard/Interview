@@ -24,5 +24,7 @@ namespace _LeetCode_Easy.Concrete
 
 
         //}
+
+
     }
 }

@@ -1,5 +1,6 @@
 
 using System.Text;
+using _14.Trees.Concrete;
 using _2.Printer.Interfaces;
 using static System.Console;
 
@@ -14,9 +15,9 @@ namespace _2.Printer.Concrete
             _sr = new StringBuilder();
         }
 
-        public void DisplayResult(T value)
+        public void DisplayNewLine()
         {
-            WriteLine(value);
+            WriteLine();
         }
 
         public void DisplayResult(T[] array)
@@ -48,5 +49,35 @@ namespace _2.Printer.Concrete
                 WriteLine();
             }
         }
+
+        public void DisplayResult(TreeNode treeNode)
+        {
+            Write($"{treeNode.val} ");
+        }
+
+
+        public void DisplayResult(IList<T> treeNodes)
+        {
+            var i = 0;
+            foreach (var item in treeNodes)
+            {
+                _sr.Append($"{item}");
+
+                if (i < treeNodes.Count - 1)
+                    _sr.Append(" ");
+
+                i++;
+            }
+
+            WriteLine(_sr.ToString());
+            _sr.Clear();
+        }
+
+        public void DisplayResult(T value)
+        {
+            WriteLine(value);
+        }
+
+
     }
 }

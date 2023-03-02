@@ -2427,5 +2427,148 @@ namespace _LeetCode_Easy.Concrete
             Array.Sort(score, new CustomComparer(k));
             return score;
         }
+
+        public int[] SeparateDigits(int[] nums)
+        {
+            var list = new Queue<int>();
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                var n = nums[i];
+                while (n > 0)
+                {
+                    list.Enqueue(n % 10);
+                    n /= 10;
+                }
+            }
+
+            return list.ToArray();
+        }
+
+        public bool SquareIsWhite(string coordinates)
+        {
+            var row = coordinates[0] - '0';
+            var col = coordinates[1];
+
+            if (row == col)
+                return false;
+
+            if ((row + col) % 2 == 1)
+                return true;
+
+            return false;
+        }
+
+        // Failed cause testcases are not same order as leetcode
+        public IList<string> RemoveAnagrams(string[] words)
+        {
+            var hashtable = new Hashtable();
+
+            for (var i = 0; i < words.Length; i++)
+            {
+                var s = words[i].ToCharArray();
+                Array.Sort(s);
+                var hashKey = new string(s);
+
+                if (!hashtable.ContainsKey(hashKey))
+                    hashtable.Add(hashKey, words[i]);
+            }
+
+            return hashtable.Values.Cast<string>().ToList();
+        }
+
+        // Consecutive anagrams are not allowed only! We are not looking for unique anagrams
+        public IList<string> RemoveAnagrams2(string[] words)
+        {
+            var dict = new Dictionary<string, string>();
+
+            for (var i = 0; i < words.Length; i++)
+            {
+                var s = words[i].ToCharArray();
+                Array.Sort(s);
+                var key = new string(s);
+
+                if (dict.ContainsKey(key)) continue;
+                else
+                {
+                    dict.Add(key, words[i]);
+                }
+            }
+
+            return dict.Values.ToArray();
+        }
+
+        public IList<string> RemoveAnagrams3(string[] words)
+        {
+            var list = new List<string>();
+
+            for (var i = 0; i < words.Length - 1; i++)
+            {
+                var temp = words[i];
+
+                while (i + 1 < words.Length && Sort(words[i]) == Sort(words[i + 1]))
+                    i++;
+
+                list.Add(temp);
+            }
+
+            return list;
+        }
+
+        private string Sort(string word)
+        {
+            var s = word.ToCharArray();
+            Array.Sort(s);
+            return new string(s);
+        }
+
+        public bool IsAnagram(string word1, string word2)
+        {
+            if (word1.Length != word2.Length) return false;
+
+            var dict = new Dictionary<char, int>();
+
+            for (var i = 0; i < word1.Length; i++)
+            {
+                if (dict.ContainsKey(word1[i]))
+                    dict[word1[i]]++;
+                else
+                    dict.Add(word1[i], 1);
+            }
+
+            for (var i = 0; i < word2.Length; i++)
+            {
+                if (dict.ContainsKey(word2[i]))
+                {
+                    if (dict[word2[i]] == 0)
+                        return false;
+                    else
+                        dict[word2[i]]--;
+                }
+                else return false;
+            }
+
+            return true;
+        }
+
+        public int AlternateDigitSum(int n)
+        {
+            var stack = new Stack<int>();
+            var sum = 0;
+
+            while (n > 0)
+            {
+                stack.Push(n % 10);
+                n /= 10;
+            }
+            var flipSign = 1;
+            while (stack.Count > 1)
+            {
+                sum += flipSign * stack.Pop();
+                flipSign *= -1;
+            }
+
+            return sum;
+        }
     }
 }
