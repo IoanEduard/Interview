@@ -7,10 +7,11 @@ using System.Numerics;
 using System.Text;
 using _ExtensionMethods;
 using _ExtensionMethods.CustomComparer;
+using _LeetCode_Easy.Interfaces;
 
 namespace _LeetCode_Easy.Concrete
 {
-    public class _Easy : EasyPrivateMethods
+    public class _Easy : EasyPrivateMethods, IEasy
     {
         public static bool UniqueOccurrences(int[] arr)
         {
@@ -2569,6 +2570,27 @@ namespace _LeetCode_Easy.Concrete
             }
 
             return sum;
+        }
+
+        public int[] LeftRigthDifference(int[] nums)
+        {
+            var sumArr = new int[nums.Length];
+            var leftSum = 0;
+            var rightSum = 0;
+
+            var i = 0;
+            var j = nums.Length - 1;
+
+            for (; i < nums.Length; i++, j--)
+            {
+                leftSum += nums[i + 1];
+                rightSum += nums[j - 1];
+                sumArr[i] = leftSum - rightSum;
+            }
+
+            return sumArr;
+
+
         }
     }
 }

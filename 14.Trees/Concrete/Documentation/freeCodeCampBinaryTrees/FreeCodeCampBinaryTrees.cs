@@ -275,7 +275,7 @@ namespace _14.Trees.Concrete.Documentation.freeCodeCampBinaryTrees
 
         public int MaxRootToLeafPath(TreeNode root)
         {
-            throw new NotImplementedException();
+            return 0;
         }
     }
 }

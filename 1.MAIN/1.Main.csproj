@@ -8,6 +8,8 @@
     <ProjectReference Include="..\_LeetCode_Medium\_LeetCode_Medium.csproj" />
     <ProjectReference Include="..\_LeetCode_Easy\_LeetCode_Easy.csproj" />
     <ProjectReference Include="..\14.Trees\14.Trees.csproj" />
+    <ProjectReference Include="..\15.DynamicProgramming\15.DynamicProgramming.csproj" />
+    <ProjectReference Include="..\7.LinkedLists\7.LinkedLists.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

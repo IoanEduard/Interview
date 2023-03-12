@@ -15,11 +15,7 @@ namespace _1.Main.StaticCalls.Trees
 
         public BinaryTreesTestRunner()
         {
-            _tests = new Tests(new Display<TreeNode>(), 
-                                new Display<int>(), 
-                                new Display<string>(), 
-                                new Display<char>(), 
-                                new Display<bool>(), 
+            _tests = new Tests(new DisplayTypeInstantiator(),
                                 new FreeCodeCampBinaryTrees(), 
                                 new LeetCodeTrees(), 
                                 new TreeTraversal());
@@ -29,25 +25,25 @@ namespace _1.Main.StaticCalls.Trees
 
         public void RunBinaryTreesTests()
         {
-            // _tests.DFS(_head);
-            // _tests.DFSRecursive(_head);
-            // _tests.InorderTraversal(_head);
-            // _tests.InorderTraversalRecursive(_head);
-            // _tests.InorderTraversal(_head);
-            // _tests.PreOrderTraversalRecursive(_head);
-            // _tests.PreOrderTraversalIterative(_head);
-            // _tests.PreOrderTraversalIterativeOptimized(_head);
-            // _tests.PostOrderTraversalRecursive(_headOfChars);
-            // _tests.PostOrderTraversalIterative(_headOfChars);
-            // _tests.BreadthFirstValuesIterative(_head);
-            // _tests.ValueExistsBFS(_head);
-            // _tests.ValueExistsRecursive(_head);
-            // _tests.TreeSumRecursive(_head);
-            // _tests.TreeSumIterative(_head);
-            // _tests.MinValueIterativeBFS(_head);
-            // _tests.MinValueIterativeDFS(_head);
-            // _tests.MinValueRecursive(_head);
-            // _tests.MaxRootToLeafPath(_head);
+            _tests.DFS(_head);
+            _tests.DFSRecursive(_head);
+            _tests.InorderTraversal(_head);
+            _tests.InorderTraversalRecursive(_head);
+            _tests.InorderTraversal(_head);
+            _tests.PreOrderTraversalRecursive(_head);
+            _tests.PreOrderTraversalIterative(_head);
+            _tests.PreOrderTraversalIterativeOptimized(_head);
+            _tests.PostOrderTraversalRecursive(_headOfChars);
+            _tests.PostOrderTraversalIterative(_headOfChars);
+            _tests.BreadthFirstValuesIterative(_head);
+            _tests.ValueExistsBFS(_head);
+            _tests.ValueExistsRecursive(_head);
+            _tests.TreeSumRecursive(_head);
+            _tests.TreeSumIterative(_head);
+            _tests.MinValueIterativeBFS(_head);
+            _tests.MinValueIterativeDFS(_head);
+            _tests.MinValueRecursive(_head);
+            _tests.MaxRootToLeafPath(_head);
             _tests.MaxRootToLeafPathRecursive(_head);
         }
     }

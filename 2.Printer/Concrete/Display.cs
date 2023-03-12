@@ -55,7 +55,6 @@ namespace _2.Printer.Concrete
             Write($"{treeNode.val} ");
         }
 
-
         public void DisplayResult(IList<T> treeNodes)
         {
             var i = 0;

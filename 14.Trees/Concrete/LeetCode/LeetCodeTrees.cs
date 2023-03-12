@@ -136,5 +136,88 @@ namespace _14.Trees.Concrete.LeetCode
             return result;
         }
 
+        public int MaxDepth(TreeNode root)
+        {
+            if (root == null) return 0;
+
+            var maxDepthLeft = MaxDepth(root.left);
+            var maxDepthRight = MaxDepth(root.right);
+
+            return Math.Max(maxDepthLeft + 1, maxDepthRight + 1);
+        }
+        public int MaxDepthIterative(TreeNode root)
+        {
+            if (root == null) return 0;
+            var count = 0;
+
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+
+            while (true)
+            {
+                var countNodes = queue.Count;
+                if (countNodes == 0)
+                    return count;
+
+                count++;
+
+                while (countNodes > 0)
+                {
+                    var current = queue.Dequeue();
+
+                    if (current.left != null)
+                        queue.Enqueue(current.left);
+
+                    if (current.right != null)
+                        queue.Enqueue(current.right);
+
+                    countNodes--;
+                }
+            }
+        }
+
+        public int MinDepth(TreeNode root)
+        {
+            if (root == null) return 0;
+            var count = 0;
+
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+
+            while (true)
+            {
+                var countNodes = queue.Count;
+                if (countNodes == 0)
+                    return count;
+
+                count++;
+
+                while (countNodes > 0)
+                {
+                    var current = queue.Dequeue();
+
+                    if (current.left == null && current.right == null)
+                        return count;
+
+                    if (current.left != null)
+                        queue.Enqueue(current.left);
+
+                    if (current.right != null)
+                        queue.Enqueue(current.right);
+
+                    countNodes--;
+                }
+            }
+        }
+
+        public int MinDepthRecursive(TreeNode root)
+        {
+            if (root == null) return 0;
+            if (root.left != null) return MinDepthRecursive(root.right) + 1;
+            if (root.right != null) return MinDepthRecursive(root.left) + 1;
+
+            return Math.Min(MinDepthRecursive(root.left), MinDepthRecursive(root.right)) + 1;
+        }
+
     }
 }

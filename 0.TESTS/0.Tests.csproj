@@ -6,6 +6,7 @@
     <ProjectReference Include="..\4.SlidingWindow\4.SlidingWindow.csproj" />
     <ProjectReference Include="..\14.Trees\14.Trees.csproj" />
     <ProjectReference Include="..\15.DynamicProgramming\15.DynamicProgramming.csproj" />
+    <ProjectReference Include="..\_LeetCode_Easy\_LeetCode_Easy.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
