@@ -5,7 +5,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Misc
     public class ExcelSheetColumnTitle
     {
         // My Failed attempt
-        public static string ConvertToTitle(int columnNumber)
+        public string ConvertToTitle(int columnNumber)
         {
             var dictionary = new Dictionary<int, char>();
             var i = 1;
@@ -32,7 +32,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Misc
         }
 
         // Optimal solution
-        public static string ConvertToBase26(int columnNumber)
+        public string ConvertToBase26(int columnNumber)
         {
             var temp = columnNumber;
             var stack = new Stack<char>();
@@ -48,7 +48,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Misc
         }
 
         // My second try
-        public static string ConvertToBase26FirstTry(int columnNumber)
+        public string ConvertToBase26FirstTry(int columnNumber)
         {
             var temp = columnNumber;
             var stringBuilder = new StringBuilder();

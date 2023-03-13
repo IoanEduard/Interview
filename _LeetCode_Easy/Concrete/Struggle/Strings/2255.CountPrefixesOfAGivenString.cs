@@ -8,7 +8,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
     public class CountPrefixesOfAGivenString
     {
         // First Attempt. Its fine, I got wrong the requirements
-        public static int CountPrefixes2(string[] words, string s)
+        public int CountPrefixes2(string[] words, string s)
         {
             var count = 0;
             var j = 1;
@@ -38,7 +38,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return count;
         }
 
-        public static int CountPrefixes(string[] words, string s)
+        public int CountPrefixes(string[] words, string s)
         {
             var count = 0;
 
@@ -59,7 +59,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return count;
         }
 
-        public static int CountPrefixes1(string[] words, string s)
+        public int CountPrefixes1(string[] words, string s)
         {
             var count = 0;
 
@@ -74,7 +74,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return count;
         }
 
-        public static int CountPrefixes3(string[] words, string s)
+        public int CountPrefixes3(string[] words, string s)
         {
             var hashSet = new HashSet<string>();
             var count = 0;

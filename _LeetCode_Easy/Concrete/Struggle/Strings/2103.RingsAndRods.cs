@@ -2,7 +2,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 {
     public class RingsAndRods
     {
-        public static int CountPoints1(string rings)
+        public int CountPoints1(string rings)
         {
             var dict = new Dictionary<int, HashSet<int>>();
             var res = 0;
@@ -29,7 +29,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 
             return res;
         }
-        public static int CountPoints(string rings)
+        public int CountPoints(string rings)
         {
             var r = new bool[10];
             var b = new bool[10];

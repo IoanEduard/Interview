@@ -1,7 +1,3 @@
-/*
-    Straight to the point easy problems
-*/
-
 using System.Collections;
 using System.Numerics;
 using System.Text;
@@ -11,9 +7,9 @@ using _LeetCode_Easy.Interfaces;
 
 namespace _LeetCode_Easy.Concrete
 {
-    public class _Easy : EasyPrivateMethods, IEasy
+    public class Easy : EasyPrivateMethods, IEasy
     {
-        public static bool UniqueOccurrences(int[] arr)
+        public bool UniqueOccurrences(int[] arr)
         {
             var dict = new Dictionary<int, int>();
             var hashset = new HashSet<int>();
@@ -40,14 +36,14 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static bool UniqueOccurrences_Linq(int[] arr)
+        public bool UniqueOccurrences_Linq(int[] arr)
         {
             var result = arr.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count());
 
             return result.Values.Distinct().Count() == result.Count();
         }
 
-        public static bool UniqueOccurrences_Linq2(int[] arr)
+        public bool UniqueOccurrences_Linq2(int[] arr)
         {
             return !arr.GroupBy(x => x)
                 .ToDictionary(x => x.Key, x => x.Count())
@@ -55,12 +51,12 @@ namespace _LeetCode_Easy.Concrete
                 .Any(x => x.Count() > 1);
         }
 
-        public static int[] Intersection(int[] nums1, int[] nums2)
+        public int[] Intersection(int[] nums1, int[] nums2)
         {
             return nums1.Intersect(nums2).ToArray();
         }
 
-        public static int[] Intersection_2(int[] nums1, int[] nums2)
+        public int[] Intersection_2(int[] nums1, int[] nums2)
         {
             var nums1HashSet = nums1.ToHashSet();
             var result = new HashSet<int>();
@@ -77,7 +73,7 @@ namespace _LeetCode_Easy.Concrete
             return result.ToArray();
         }
 
-        public static bool HalvesAreAlike(string s, char[] vowels)
+        public bool HalvesAreAlike(string s, char[] vowels)
         {
             var middle = (int)Math.Ceiling((decimal)(s.Length - 1) / 2);
 
@@ -100,7 +96,7 @@ namespace _LeetCode_Easy.Concrete
             return startCount == endCount;
         }
 
-        public static string DefangIPaddr(string address)
+        public string DefangIPaddr(string address)
         {
             var stringBuilder = new StringBuilder();
 
@@ -118,7 +114,7 @@ namespace _LeetCode_Easy.Concrete
             return stringBuilder.ToString();
         }
 
-        public static string ToGoatLatin(string sentence, char[] wovewlsUpperCase)
+        public string ToGoatLatin(string sentence, char[] wovewlsUpperCase)
         {
             var words = sentence.Split(' ');
             var stringBuilder = new StringBuilder();
@@ -148,12 +144,12 @@ namespace _LeetCode_Easy.Concrete
             return stringBuilder.ToString();
         }
 
-        public static string GenerateTheString(int n)
+        public string GenerateTheString(int n)
         {
             return n % 2 == 1 ? new string('a', n) : "a" + new string('b', n - 1);
         }
 
-        public static string[] FindOcurrences(string text, string first, string second)
+        public string[] FindOcurrences(string text, string first, string second)
         {
             var splitText = text.Split(' ');
             var result = new List<string>();
@@ -169,7 +165,7 @@ namespace _LeetCode_Easy.Concrete
             return result.ToArray();
         }
 
-        public static string RemoveOuterParentheses(string s)
+        public string RemoveOuterParentheses(string s)
         {
             var sr = new StringBuilder();
             var count = 0;
@@ -193,7 +189,7 @@ namespace _LeetCode_Easy.Concrete
             return sr.ToString();
         }
 
-        public static int ArrayPairSum(int[] nums)
+        public int ArrayPairSum(int[] nums)
         {
             var result = 0;
             Array.Sort(nums);
@@ -206,7 +202,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int FindPoisonedDuration(int[] timeSeries, int duration)
+        public int FindPoisonedDuration(int[] timeSeries, int duration)
         {
             var result = 0;
 
@@ -229,7 +225,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int[] SortArrayByParityII(int[] nums)
+        public int[] SortArrayByParityII(int[] nums)
         {
             var result = new int[nums.Length];
 
@@ -254,7 +250,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static bool IsPalindrome(string s)
+        public bool IsPalindrome(string s)
         {
             var start = 0;
             var end = s.Length - 1;
@@ -285,7 +281,7 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static int[] SortedSquares(int[] nums)
+        public int[] SortedSquares(int[] nums)
         {
             var result = new int[nums.Length];
 
@@ -299,7 +295,7 @@ namespace _LeetCode_Easy.Concrete
             return nums;
         }
 
-        public static int[] SortedSquares2(int[] nums)
+        public int[] SortedSquares2(int[] nums)
         {
             var result = new int[nums.Length];
 
@@ -323,7 +319,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int[] SortedSquares3(int[] nums)
+        public int[] SortedSquares3(int[] nums)
         {
             var result = new int[nums.Length];
 
@@ -339,7 +335,7 @@ namespace _LeetCode_Easy.Concrete
 
             return result;
         }
-        public static int[] SortArrayByParityII2(int[] nums)
+        public int[] SortArrayByParityII2(int[] nums)
         {
             var result = new int[nums.Length];
             var start = 0;
@@ -362,7 +358,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static void ReverseString(char[] s)
+        public void ReverseString(char[] s)
         {
             for (int i = 0, j = s.Length - 1; i < j; i++, j--)
             {
@@ -372,7 +368,7 @@ namespace _LeetCode_Easy.Concrete
             }
         }
 
-        public static int FirstUniqChar(string s)
+        public int FirstUniqChar(string s)
         {
             var isDuplicate = false;
 
@@ -399,7 +395,7 @@ namespace _LeetCode_Easy.Concrete
             return -1;
         }
 
-        public static bool JudgeCircle(string moves)
+        public bool JudgeCircle(string moves)
         {
             var upDown = 0;
             var leftRight = 0;
@@ -428,7 +424,7 @@ namespace _LeetCode_Easy.Concrete
             return upDown == 0 && leftRight == 0;
         }
 
-        public static int BalancedStringSplit(string s)
+        public int BalancedStringSplit(string s)
         {
             var result = 0;
             var rCounter = 0;
@@ -453,7 +449,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static bool IsValid(string s)
+        public bool IsValid(string s)
         {
             var stack = new Stack<char>();
 
@@ -479,7 +475,7 @@ namespace _LeetCode_Easy.Concrete
 
 
 
-        public static int[] BuildArray(int[] nums)
+        public int[] BuildArray(int[] nums)
         {
             var result = new int[nums.Length];
 
@@ -491,7 +487,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int[] GetConcatenation(int[] nums)
+        public int[] GetConcatenation(int[] nums)
         {
             //return nums.Concat(nums).ToArray();
 
@@ -506,7 +502,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int FinalValueAfterOperations(string[] operations)
+        public int FinalValueAfterOperations(string[] operations)
         {
             var x = 0;
 
@@ -528,7 +524,7 @@ namespace _LeetCode_Easy.Concrete
             return x;
         }
 
-        public static int[] RunningSum(int[] nums)
+        public int[] RunningSum(int[] nums)
         {
             var result = new int[nums.Length];
             result[0] = nums[0];
@@ -541,7 +537,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int NumIdenticalPairs(int[] nums)
+        public int NumIdenticalPairs(int[] nums)
         {
             var count = 0;
 
@@ -556,7 +552,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static int[] Shuffle1(int[] nums, int n)
+        public int[] Shuffle1(int[] nums, int n)
         {
             var list = new List<int>();
 
@@ -569,7 +565,7 @@ namespace _LeetCode_Easy.Concrete
             return list.ToArray();
         }
 
-        public static int[] Shuffle(int[] nums, int n)
+        public int[] Shuffle(int[] nums, int n)
         {
             var arr = new int[nums.Length];
 
@@ -584,7 +580,7 @@ namespace _LeetCode_Easy.Concrete
             return arr;
         }
 
-        public static int MostWordsFound(string[] sentences)
+        public int MostWordsFound(string[] sentences)
         {
             var max = int.MinValue;
             foreach (var item in sentences)
@@ -596,7 +592,7 @@ namespace _LeetCode_Easy.Concrete
             return max;
         }
 
-        public static IList<bool> KidsWithCandies(int[] candies, int extraCandies)
+        public IList<bool> KidsWithCandies(int[] candies, int extraCandies)
         {
             var res = new bool[candies.Length];
             var max = candies.Max();
@@ -612,7 +608,7 @@ namespace _LeetCode_Easy.Concrete
             return res;
         }
 
-        public static int[] SmallerNumbersThanCurrent(int[] nums)
+        public int[] SmallerNumbersThanCurrent(int[] nums)
         {
             var res = new int[nums.Length];
             for (int i = 0; i < nums.Length; i++)
@@ -629,7 +625,7 @@ namespace _LeetCode_Easy.Concrete
             return res;
         }
 
-        public static int[] Decode(int[] encoded, int first)
+        public int[] Decode(int[] encoded, int first)
         {
             var res = new int[encoded.Length + 1];
 
@@ -642,7 +638,7 @@ namespace _LeetCode_Easy.Concrete
             return res;
         }
 
-        public static int[] DecompressRLElist(int[] nums)
+        public int[] DecompressRLElist(int[] nums)
         {
             var list = new List<int>();
 
@@ -657,7 +653,7 @@ namespace _LeetCode_Easy.Concrete
             return list.ToArray();
         }
 
-        public static string RestoreString(string s, int[] indices)
+        public string RestoreString(string s, int[] indices)
         {
             var charArr = new char[s.Length];
 
@@ -669,7 +665,7 @@ namespace _LeetCode_Easy.Concrete
             return new string(charArr);
         }
 
-        public static int MaximumValue(string[] strs)
+        public int MaximumValue(string[] strs)
         {
             var count = 0;
             var max = int.MinValue;
@@ -690,7 +686,7 @@ namespace _LeetCode_Easy.Concrete
             return max;
         }
 
-        public static int CountMatches(IList<IList<string>> items, string ruleKey, string ruleValue)
+        public int CountMatches(IList<IList<string>> items, string ruleKey, string ruleValue)
         {
             var count = 0;
             var indexRuleKey = 0;
@@ -718,7 +714,7 @@ namespace _LeetCode_Easy.Concrete
 
             return count;
         }
-        public static int ArithmeticTriplets(int[] nums, int diff)
+        public int ArithmeticTriplets(int[] nums, int diff)
         {
             var count = 0;
 
@@ -737,7 +733,7 @@ namespace _LeetCode_Easy.Concrete
             }
             return count;
         }
-        public static int[] TwoSumBruteForce(int[] nums, int target)
+        public int[] TwoSumBruteForce(int[] nums, int target)
         {
             for (int i = 0; i < nums.Length; i++)
             {
@@ -749,7 +745,7 @@ namespace _LeetCode_Easy.Concrete
 
             return new int[2];
         }
-        public static int[] TwoSum(int[] nums, int target)
+        public int[] TwoSum(int[] nums, int target)
         {
             var dict = new Dictionary<int, int>();
 
@@ -770,7 +766,7 @@ namespace _LeetCode_Easy.Concrete
             return new int[2];
         }
 
-        public static int CountKDifference(int[] nums, int k)
+        public int CountKDifference(int[] nums, int k)
         {
             var count = 0;
 
@@ -788,7 +784,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static int CountPairs(int[] nums, int k)
+        public int CountPairs(int[] nums, int k)
         {
             var count = 0;
 
@@ -806,13 +802,13 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static string TruncateSentence(string s, int k)
+        public string TruncateSentence(string s, int k)
         {
             var split = s.Split(' ');
             return string.Join(' ', split.SkipLast(split.Length - k));
         }
 
-        public static int MinMovesToSeat(int[] seats, int[] students)
+        public int MinMovesToSeat(int[] seats, int[] students)
         {
             Array.Sort(seats);
             Array.Sort(students);
@@ -830,7 +826,7 @@ namespace _LeetCode_Easy.Concrete
             return moves;
         }
 
-        public static int CountConsistentStrings(string[] words, string allowed)
+        public int CountConsistentStrings(string[] words, string allowed)
         {
             var result = words.Length;
 
@@ -850,7 +846,7 @@ namespace _LeetCode_Easy.Concrete
 
             return result;
         }
-        public static string Interpret(string command)
+        public string Interpret(string command)
         {
             if (command.Length == 1 && char.IsLetter(command[0]))
                 return command;
@@ -874,7 +870,7 @@ namespace _LeetCode_Easy.Concrete
             return sr.ToString();
         }
 
-        public static bool IsPalindrome(int x)
+        public bool IsPalindrome(int x)
         {
             var result = 0;
             var temp = x;
@@ -888,14 +884,14 @@ namespace _LeetCode_Easy.Concrete
             return result == x;
         }
 
-        public static int MajorityElement(int[] nums)
+        public int MajorityElement(int[] nums)
         {
             Array.Sort(nums);
 
             return nums[nums.Length / 2];
         }
 
-        public static int MostFrequentEven(int[] nums)
+        public int MostFrequentEven(int[] nums)
         {
             if (nums.Length == 1) return nums[0];
 
@@ -928,7 +924,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int TitleToNumber(string columnTitle)
+        public int TitleToNumber(string columnTitle)
         {
             var dictionary = new Dictionary<char, int>();
             var j = 1;
@@ -951,7 +947,7 @@ namespace _LeetCode_Easy.Concrete
             return res + dictionary[columnTitle[columnTitle.Length - 1]];
         }
 
-        public static int CountSegments1(string s)
+        public int CountSegments1(string s)
         {
             var sr = new StringBuilder();
             var whitespaceCount = 0;
@@ -980,7 +976,7 @@ namespace _LeetCode_Easy.Concrete
             return ss.Split(' ').Length;
         }
 
-        public static int CountSegments(string s)
+        public int CountSegments(string s)
         {
             if (s == string.Empty) return 0;
             if (s.Length == 1 && !char.IsWhiteSpace(s[0])) return 1;
@@ -997,7 +993,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static bool CanBeIncreasing(int[] nums)
+        public bool CanBeIncreasing(int[] nums)
         {
             var count = 0;
 
@@ -1017,12 +1013,12 @@ namespace _LeetCode_Easy.Concrete
             return count < 2;
         }
 
-        public static double[] ConvertTemperature(double celsius)
+        public double[] ConvertTemperature(double celsius)
         {
             return new double[] { celsius * 1.8 + 32, celsius + 273.15 };
         }
 
-        public static int SmallestEvenMultiple(int n)
+        public int SmallestEvenMultiple(int n)
         {
             if (n % 2 == 0 && n % n == 0)
                 return n;
@@ -1030,7 +1026,7 @@ namespace _LeetCode_Easy.Concrete
             return SmallestEvenMultiple(n + n);
         }
 
-        public static int DifferenceOfSum(int[] nums)
+        public int DifferenceOfSum(int[] nums)
         {
             var sum = 0;
             var sumOfDigits = 0;
@@ -1048,14 +1044,14 @@ namespace _LeetCode_Easy.Concrete
             return Math.Abs(sum - sumOfDigits);
         }
 
-        public static int AddDigits(int num)
+        public int AddDigits(int num)
         {
             if (num % 9 == 0) return 9;
 
             return num % 9;
         }
 
-        public static int GetLucky(string s, int k)
+        public int GetLucky(string s, int k)
         {
             BigInteger temp = 0;
 
@@ -1097,7 +1093,7 @@ namespace _LeetCode_Easy.Concrete
             return (int)res;
         }
 
-        public static int MinimumSum(int num)
+        public int MinimumSum(int num)
         {
             var arr = new int[4];
 
@@ -1112,7 +1108,7 @@ namespace _LeetCode_Easy.Concrete
             return (arr[0] * 10 + arr[2]) + (arr[1] * 10 + arr[3]);
         }
 
-        public static int CountEven(int num)
+        public int CountEven(int num)
         {
             var count = 0;
 
@@ -1133,7 +1129,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static bool IsHappy(int n)
+        public bool IsHappy(int n)
         {
             var temp = n;
             var hashset = new HashSet<int>();
@@ -1159,7 +1155,7 @@ namespace _LeetCode_Easy.Concrete
             }
         }
 
-        public static bool IsUgly(int n)
+        public bool IsUgly(int n)
         {
             if (n <= 0) return false;
 
@@ -1184,7 +1180,7 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static int MinMaxGame(int[] nums)
+        public int MinMaxGame(int[] nums)
         {
             var n = nums.Length;
 
@@ -1205,7 +1201,7 @@ namespace _LeetCode_Easy.Concrete
             return nums[0];
         }
 
-        public static int CountQuadruplets(int[] nums)
+        public int CountQuadruplets(int[] nums)
         {
             var count = 0;
             for (int i = 0; i < nums.Length; i++)
@@ -1234,7 +1230,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static int MinPartitions(string n)
+        public int MinPartitions(string n)
         {
             var max = 0;
             for (int i = 0; i < n.Length; i++)
@@ -1246,7 +1242,7 @@ namespace _LeetCode_Easy.Concrete
             return max;
         }
 
-        public static string ReversePrefix(string word, char ch)
+        public string ReversePrefix(string word, char ch)
         {
             var indexSubstring = word.IndexOf(ch);
             var wordArray = word.ToCharArray();
@@ -1266,7 +1262,7 @@ namespace _LeetCode_Easy.Concrete
             return new string(wordArray);
         }
 
-        public static int XorOperation(int n, int start)
+        public int XorOperation(int n, int start)
         {
             var res = 0;
             var i = 0;
@@ -1280,7 +1276,7 @@ namespace _LeetCode_Easy.Concrete
             return res;
         }
 
-        public static string FreqAlphabets(string s)
+        public string FreqAlphabets(string s)
         {
             var stack = new Stack<char>();
 
@@ -1303,7 +1299,7 @@ namespace _LeetCode_Easy.Concrete
             return new string(stack.ToArray());
         }
 
-        public static int CountDigits(int num)
+        public int CountDigits(int num)
         {
             var temp = num;
             var count = 0;
@@ -1316,13 +1312,13 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static int MaxProduct(int[] nums)
+        public int MaxProduct(int[] nums)
         {
             Array.Sort(nums);
             return (nums[nums.Length - 1] - 1) * (nums[nums.Length - 2] - 1);
         }
 
-        public static int SubtractProductAndSum(int n)
+        public int SubtractProductAndSum(int n)
         {
             var sum = 0;
             var product = 1;
@@ -1338,7 +1334,7 @@ namespace _LeetCode_Easy.Concrete
             return product - sum;
         }
 
-        public static bool CheckIfPangram(string sentence)
+        public bool CheckIfPangram(string sentence)
         {
             var chars = new HashSet<char>();
 
@@ -1352,7 +1348,7 @@ namespace _LeetCode_Easy.Concrete
             return false;
         }
 
-        public static bool AreNumbersAscending(string s)
+        public bool AreNumbersAscending(string s)
         {
             var array = s.Split(' ');
             var prevVal = 0;
@@ -1375,7 +1371,7 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static string SortSentence(string s)
+        public string SortSentence(string s)
         {
             var array = s.Split(' ');
             var res = new string[array.Length];
@@ -1388,7 +1384,7 @@ namespace _LeetCode_Easy.Concrete
             return string.Join(' ', res);
         }
 
-        public static int NumOfStringsBasic(string[] patterns, string word)
+        public int NumOfStringsBasic(string[] patterns, string word)
         {
             var count = 0;
             for (int i = 0; i < patterns.Length; i++)
@@ -1398,7 +1394,7 @@ namespace _LeetCode_Easy.Concrete
 
             return count;
         }
-        public static int NumOfStrings(string[] patterns, string word)
+        public int NumOfStrings(string[] patterns, string word)
         {
             var count = 0;
 
@@ -1413,7 +1409,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static bool CheckString(string s)
+        public bool CheckString(string s)
         {
             var bFound = false;
 
@@ -1429,7 +1425,7 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static string DecodeMessage(string key, string message)
+        public string DecodeMessage(string key, string message)
         {
             var chiper = message[0];
 
@@ -1471,7 +1467,7 @@ namespace _LeetCode_Easy.Concrete
 
         }
 
-        public static string ReverseWords(string s)
+        public string ReverseWords(string s)
         {
             var arr = s.Split(' ');
             var sr = new StringBuilder();
@@ -1489,7 +1485,7 @@ namespace _LeetCode_Easy.Concrete
             return sr.ToString();
         }
 
-        public static string ReverseStr(string s, int k)
+        public string ReverseStr(string s, int k)
         {
             var stringbuilder = new StringBuilder();
             var subArraysToReverse = new List<string>();
@@ -1525,7 +1521,7 @@ namespace _LeetCode_Easy.Concrete
             return stringbuilder.ToString();
         }
 
-        public static void ReverseString3(char[] s)
+        public void ReverseString3(char[] s)
         {
             var left = 0;
             var right = s.Length - 1;
@@ -1540,7 +1536,7 @@ namespace _LeetCode_Easy.Concrete
             }
         }
 
-        public static int CountAsterisks(string s)
+        public int CountAsterisks(string s)
         {
             var countVerticalLine = 0;
             var result = 0;
@@ -1557,7 +1553,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int[] SumZero(int n)
+        public int[] SumZero(int n)
         {
             var list = new List<int>();
 
@@ -1576,7 +1572,7 @@ namespace _LeetCode_Easy.Concrete
             return list.ToArray();
         }
 
-        public static int MaxVowels(string s, int k)
+        public int MaxVowels(string s, int k)
         {
             var currentCount = 0;
             var max = 0;
@@ -1604,7 +1600,7 @@ namespace _LeetCode_Easy.Concrete
             return max;
         }
 
-        public static int LongestOnes(int[] nums, int k)
+        public int LongestOnes(int[] nums, int k)
         {
             var max = 0;
             var countZeroes = 0;
@@ -1625,7 +1621,7 @@ namespace _LeetCode_Easy.Concrete
             return max;
         }
 
-        public static bool KLengthApart(int[] nums, int k)
+        public bool KLengthApart(int[] nums, int k)
         {
             var countZeroes = k;
 
@@ -1642,7 +1638,7 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static string FirstPalindrome(string[] words)
+        public string FirstPalindrome(string[] words)
         {
             for (int i = 0; i < words.Length; i++)
             {
@@ -1655,7 +1651,7 @@ namespace _LeetCode_Easy.Concrete
             return "";
         }
 
-        public static int CountGoodTriplets(int[] arr, int a, int b, int c)
+        public int CountGoodTriplets(int[] arr, int a, int b, int c)
         {
             var count = 0;
 
@@ -1677,7 +1673,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static int PercentageLetter(string s, char letter)
+        public int PercentageLetter(string s, char letter)
         {
             var freq = 0;
 
@@ -1689,7 +1685,7 @@ namespace _LeetCode_Easy.Concrete
             return freq * 100 / s.Length;
         }
 
-        public static string CapitalizeTitle(string title)
+        public string CapitalizeTitle(string title)
         {
             var sr = new StringBuilder();
             var titleArr = title.Split(' ');
@@ -1722,7 +1718,7 @@ namespace _LeetCode_Easy.Concrete
             return sr.ToString();
         }
 
-        public static bool DetectCapitalUse(string word)
+        public bool DetectCapitalUse(string word)
         {
             if (word.Length == 1) return true;
 
@@ -1757,7 +1753,7 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static int MaxDepth(string s)
+        public int MaxDepth(string s)
         {
             var counter = 0;
             var maxParanthesis = int.MinValue;
@@ -1772,7 +1768,7 @@ namespace _LeetCode_Easy.Concrete
 
             return maxParanthesis;
         }
-        public static int DistinctIntegers(int n)
+        public int DistinctIntegers(int n)
         {
             var hash = new HashSet<int>();
             while (n > 0)
@@ -1789,7 +1785,7 @@ namespace _LeetCode_Easy.Concrete
             return hash.Count;
         }
 
-        public static int Maximum69Number(int num)
+        public int Maximum69Number(int num)
         {
             var numCharArr = num.ToString().ToCharArray();
             var max = int.MinValue;
@@ -1814,7 +1810,7 @@ namespace _LeetCode_Easy.Concrete
             return max;
         }
 
-        public static int MaxProductDifference(int[] nums)
+        public int MaxProductDifference(int[] nums)
         {
             Array.Sort(nums);
             var n = nums.Length;
@@ -1822,7 +1818,7 @@ namespace _LeetCode_Easy.Concrete
             return (nums[n - 1] * nums[n - 2]) - (nums[0] * nums[1]);
         }
 
-        public static int CommonFactors(int a, int b)
+        public int CommonFactors(int a, int b)
         {
             var count = 0;
             for (int i = 1; i <= b; i++)
@@ -1833,7 +1829,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static string ReplaceDigits(string s)
+        public string ReplaceDigits(string s)
         {
             var stringBuilder = new StringBuilder();
 
@@ -1848,7 +1844,7 @@ namespace _LeetCode_Easy.Concrete
             return stringBuilder.ToString();
         }
 
-        public static IList<int> SelfDividingNumbers(int left, int right)
+        public IList<int> SelfDividingNumbers(int left, int right)
         {
             // 128: 128 % 1, 128 % 2, 128 % 8
             var list = new List<int>();
@@ -1883,7 +1879,7 @@ namespace _LeetCode_Easy.Concrete
             return list;
         }
 
-        public static bool CheckPerfectNumber(int num)
+        public bool CheckPerfectNumber(int num)
         {
             var sum = 0;
 
@@ -1899,7 +1895,7 @@ namespace _LeetCode_Easy.Concrete
             return sum == num;
         }
 
-        public static int NumberOfMatches(int n)
+        public int NumberOfMatches(int n)
         {
             var matches = 0;
 
@@ -1920,7 +1916,7 @@ namespace _LeetCode_Easy.Concrete
             return matches;
         }
 
-        public static int NumberOfSteps(int num)
+        public int NumberOfSteps(int num)
         {
             var count = 0;
 
@@ -1942,7 +1938,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static int CountOperations(int num1, int num2)
+        public int CountOperations(int num1, int num2)
         {
             var count = 0;
             while (num1 > 0 && num2 > 0)
@@ -1958,7 +1954,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static bool AreOccurrencesEqual(string s)
+        public bool AreOccurrencesEqual(string s)
         {
             var dictionary = new Dictionary<char, int>();
 
@@ -1985,7 +1981,7 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static int SecondHighest(string s)
+        public int SecondHighest(string s)
         {
             var res = new int[2] { int.MinValue, int.MinValue };
 
@@ -2005,7 +2001,7 @@ namespace _LeetCode_Easy.Concrete
             return res[1] >= 0 ? res[1] - '0' : -1;
         }
 
-        public static int MaximumCount(int[] nums)
+        public int MaximumCount(int[] nums)
         {
             var countNegatives = 0;
             var countPositive = 0;
@@ -2019,7 +2015,7 @@ namespace _LeetCode_Easy.Concrete
             return Math.Max(countNegatives, countPositive);
         }
 
-        public static IList<string> FizzBuzz(int n)
+        public IList<string> FizzBuzz(int n)
         {
             var list = new List<string>();
 
@@ -2049,7 +2045,7 @@ namespace _LeetCode_Easy.Concrete
             return list;
         }
 
-        public static bool CanConstruct(string ransomNote, string magazine)
+        public bool CanConstruct(string ransomNote, string magazine)
         {
             var dict = new Dictionary<char, int>();
 
@@ -2087,7 +2083,7 @@ namespace _LeetCode_Easy.Concrete
             return true;
         }
 
-        public static int FindMaxConsecutiveOnes_1(int[] nums)
+        public int FindMaxConsecutiveOnes_1(int[] nums)
         {
             var resultCount = 0;
             var currentCount = 0;
@@ -2109,12 +2105,12 @@ namespace _LeetCode_Easy.Concrete
             return resultCount;
         }
 
-        public static bool ArrayStringsAreEqualStack(string[] word1, string[] word2)
+        public bool ArrayStringsAreEqualStack(string[] word1, string[] word2)
         {
             return string.Concat(word1).Equals(string.Concat(word2));
         }
 
-        public static int LargestAltitude(int[] gain)
+        public int LargestAltitude(int[] gain)
         {
             var max = 0; var prefSum = 0;
             for (int i = 0; i < gain.Length - 1; i++)
@@ -2128,7 +2124,7 @@ namespace _LeetCode_Easy.Concrete
             return max;
         }
 
-        public static string ToLowerCase(string s)
+        public string ToLowerCase(string s)
         {
             var stringBuilder = new StringBuilder();
 
@@ -2146,7 +2142,7 @@ namespace _LeetCode_Easy.Concrete
             return stringBuilder.ToString();
         }
 
-        public static string ToLowerCase1(string s)
+        public string ToLowerCase1(string s)
         {
             var stringBuilder = new StringBuilder();
 
@@ -2164,7 +2160,7 @@ namespace _LeetCode_Easy.Concrete
             return stringBuilder.ToString();
         }
 
-        public static int PrefixCount0(string[] words, string pref)
+        public int PrefixCount0(string[] words, string pref)
         {
             var count = 0;
             for (int i = 0; i < words.Length; i++)
@@ -2175,7 +2171,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static int PrefixCount(string[] words, string pref)
+        public int PrefixCount(string[] words, string pref)
         {
             var count = 0;
 
@@ -2201,7 +2197,7 @@ namespace _LeetCode_Easy.Concrete
             return count;
         }
 
-        public static string DestCity(IList<IList<string>> paths)
+        public string DestCity(IList<IList<string>> paths)
         {
             var hashtable = new Hashtable();
             var result = string.Empty;
@@ -2223,7 +2219,7 @@ namespace _LeetCode_Easy.Concrete
             return result;
         }
 
-        public static int NumJewelsInStones(string jewels, string stones)
+        public int NumJewelsInStones(string jewels, string stones)
         {
             var dict = new Dictionary<char, int>();
 
@@ -2243,7 +2239,7 @@ namespace _LeetCode_Easy.Concrete
             return dict.Values.Sum() - dict.Values.Count();
         }
 
-        public static bool ArrayStringsAreEqual(string[] word1, string[] word2)
+        public bool ArrayStringsAreEqual(string[] word1, string[] word2)
         {
             var dictionary = new Dictionary<char, int>();
 
@@ -2267,7 +2263,7 @@ namespace _LeetCode_Easy.Concrete
         }
 
 
-        public static int FindLucky(int[] arr)
+        public int FindLucky(int[] arr)
         {
             var luckyNumbersDictionary = new Dictionary<int, int>();
 
@@ -2284,7 +2280,7 @@ namespace _LeetCode_Easy.Concrete
             return luckyNumbersDictionary.Count() > 0 ? luckyNumbersDictionary.Max(item => item.Value) : -1;
         }
 
-        public static int CountWords(string[] words1, string[] words2)
+        public int CountWords(string[] words1, string[] words2)
         {
             var dict1 = new Dictionary<string, int>();
             var dict2 = new Dictionary<string, int>();

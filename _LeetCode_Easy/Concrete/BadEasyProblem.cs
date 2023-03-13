@@ -1,16 +1,11 @@
-/*
-    496. Next Greater Element I
-    https://leetcode.com/problems/next-greater-element-i/description/
-
-*/
-
 // Here comes problems with bad text, bad examples or doesn't fit the tag.
+using _LeetCode_Easy.Interfaces;
+
 namespace _LeetCode_Easy.Concrete
 {
-
-    public class LeetcodeEasyProblemsBadProblem
+    public class BadEasyProblem : IBadEasyProblem
     {
-         public static int[] NextGreaterElement(int[] nums1, int[] nums2)
+         public int[] NextGreaterElement(int[] nums1, int[] nums2)
         {
             var result = new List<int>();
             var dict = new Dictionary<int, int>();

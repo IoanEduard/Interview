@@ -23,7 +23,7 @@ namespace _1.Main.StaticCalls.Trees
             _headOfChars = _tests.TreeNodeOfChars;
         }
 
-        public void RunBinaryTreesTests()
+        public void RunTests()
         {
             _tests.DFS(_head);
             _tests.DFSRecursive(_head);

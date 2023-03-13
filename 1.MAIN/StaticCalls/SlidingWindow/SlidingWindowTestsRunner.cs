@@ -13,7 +13,7 @@ namespace _1.Main.StaticCalls.SlidingWindow
             _tests = new Tests(new DisplayTypeInstantiator(),  new SlidingWindowProblems());
         }
 
-        public void RunSlidingWindowTests()
+        public void RunTests()
         {
             _tests.CountGoodSubstrings_v1_Test();
             _tests.CountGoodSubstrings_v2_Test();

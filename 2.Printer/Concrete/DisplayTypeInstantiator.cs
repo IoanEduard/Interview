@@ -14,7 +14,6 @@ namespace _2.Printer.Concrete
         // public IDisplay<int[][]> DisplayIntegerMatrix { get; set; }
         public IDisplay<TreeNode> DisplayTreeNode { get; set; }
         public IDisplay<ListNode> DisplayListNode { get; set; }
-        public IDisplay<IList<string>> DisplayListOfString { get; set; }
 
         public DisplayTypeInstantiator()
         {
@@ -26,7 +25,6 @@ namespace _2.Printer.Concrete
             // DisplayIntegerMatrix = new Display<int[][]>();
             DisplayTreeNode = new Display<TreeNode>();
             DisplayListNode = new Display<ListNode>();
-            DisplayListOfString = new Display<IList<string>>();
         }
     }
 }

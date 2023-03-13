@@ -4,8 +4,8 @@ using _1.Main.StaticCalls.SlidingWindow;
 using _1.Main.StaticCalls.SortingAlgorithms;
 using _1.Main.StaticCalls.Trees;
 using _15.DynamicProgramming.FreeCodeCamp.Concrete.Documentation;
-using _LeetCode_Easy.Concrete;
-using _LeetCode_Easy.Concrete.LowAcceptanceRate;
+
+// var dailyWork = new DailyWorkFileTestRunner();
 
 var binaryTreeTets = new BinaryTreesTestRunner();
 // binaryTreeTets.RunBinaryTreesTests();
@@ -16,18 +16,37 @@ var slidingWindowTests = new SlidingWindowTestsRunner();
 var quickSortTests = new QuickSortTestsRunner();
 // quickSortTests.RunQuickSortTests();
 
-var oopLeetCode = new LeetcodeOOPQuestionsTestRunner();
-oopLeetCode.RunLeetcodeOOPQuestions();
+var oopLeetCode = new OOPQuestionsTestRunner();
+// oopLeetCode.RunLeetcodeOOPQuestions();
+
+var lowAcceptanceRate = new LowAcceptanceRateTestRunner();
+// lowAcceptanceRate.RunLeetcodeOOPQuestions();
+
+var badProblems = new BadProblemsTestRunner();
+// badProblems.RunTests();
+
+var toImprove = new ProblemsToImproveTestRunner();
+// toImprove.RunTests();
+
+// Algorithms are easy straight forward, no testcases documented.
+var easy = new EasyProblemsTestRunner();
+
+
+var struggle = new StruggleProblemsTestRunner();
+struggle.RunTests_Arrays();
+struggle.RunTests_BitManipulation();
+
 
 
 // var easyLeetCode = new EasyLeetcodeQuestionsTestRunner();
 
-
-
 // var mediumLeetCode = new EasyLeetcodeQuestionsTestRunner();
 
-
 // var hardLeetCode = new EasyLeetcodeQuestionsTestRunner();
+
+// var struggleLeetCode = new StruggleLeetCodeQuestionsTestRunner();
+
+
 
 
 
@@ -42,15 +61,11 @@ oopLeetCode.RunLeetcodeOOPQuestions();
 
 // Migrate everything on this project
 
-var easy = new _Easy();
+// var easy = new _Easy();
 // System.Console.WriteLine(easy.IsAnagram("anagram", "nagaram"));
 // System.Console.WriteLine(easy.IsAnagram("aacc", "ccac"));
 // System.Console.WriteLine(easy.AlternateDigitSum(886996));
 
-
-
-var low = new LowAcceptanceRate();
-// System.Console.WriteLine(low.Reverse(321));
 
 var dp = new FreecodeCampDP();
 // System.Console.WriteLine(dp.FibRecursive(48));

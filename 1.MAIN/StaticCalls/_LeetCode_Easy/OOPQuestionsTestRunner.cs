@@ -4,16 +4,16 @@ using _2.Printer.Concrete;
 
 namespace _1.Main.StaticCalls._LeetCode_Easy
 {
-    public class LeetcodeOOPQuestionsTestRunner
+    public class OOPQuestionsTestRunner
     {
         private readonly TestsOOP _tests;
 
-        public LeetcodeOOPQuestionsTestRunner()
+        public OOPQuestionsTestRunner()
         {
             _tests = new TestsOOP(new DisplayTypeInstantiator());
         }
 
-        public void RunLeetcodeOOPQuestions()
+        public void RunTests()
         { 
             _tests.Codec_Test();
             _tests.OrderedStream_Test();

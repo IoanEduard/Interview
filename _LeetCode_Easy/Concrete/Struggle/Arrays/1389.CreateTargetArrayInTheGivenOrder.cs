@@ -3,7 +3,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Arrays
     public class CreateTargetArrayInTheGivenOrder
     {
         // bad solution
-        public static int[] CreateTargetArray0(int[] nums, int[] index)
+        public int[] CreateTargetArray0(int[] nums, int[] index)
         {
             var res = new List<int>();
 
@@ -15,7 +15,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Arrays
             return res.ToArray();
         }
 
-        public static int[] CreateTargetArray(int[] nums, int[] index)
+        public int[] CreateTargetArray(int[] nums, int[] index)
         {
             var res = new int[nums.Length];
 

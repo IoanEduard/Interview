@@ -4,7 +4,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 {
     public class CalculateDigitSumOfAString
     {
-        public static string DigitSum(string s, int k)
+        public string DigitSum(string s, int k)
         {
             var stringBuilder = new StringBuilder();
             var substring = string.Empty;

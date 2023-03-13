@@ -4,7 +4,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 {
     public class IsomorphicStrings
     {
-        public static bool IsIsomorphic(string s, string t)
+        public bool IsIsomorphic(string s, string t)
         {
             if (s.Length != t.Length)
                 return false;
@@ -30,7 +30,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return true;
         }
 
-        public static bool IsIsomorphic2(string s, string t)
+        public bool IsIsomorphic2(string s, string t)
         {
             var dictionary = new Dictionary<char, char>();
             var hashS = new HashSet<char>();
@@ -54,7 +54,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return true;
         }
 
-        public static bool IsIsomorphic3(string s, string t)
+        public bool IsIsomorphic3(string s, string t)
         {
             var dictionary = new Dictionary<char, char>();
             var hashS = new HashSet<char>();
@@ -78,7 +78,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return true;
         }
 
-        public static bool IsIsomorphic4(string s, string t)
+        public bool IsIsomorphic4(string s, string t)
         {
             var dictionary = new Dictionary<char, char>();
 

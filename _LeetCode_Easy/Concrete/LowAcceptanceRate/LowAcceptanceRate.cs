@@ -1,12 +1,14 @@
+using _LeetCode_Easy.Interfaces;
+
 namespace _LeetCode_Easy.Concrete.LowAcceptanceRate
 {
-    public class LowAcceptanceRate
+    public class LowAcceptanceRate : ILowAcceptanceRate
     {
         public int Reverse(int x)
         {
             var result = 0;
             var isNegative = false;
-            
+
             var minimumBound = int.MinValue / 10;
             var maximumBound = int.MaxValue / 10;
 

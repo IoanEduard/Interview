@@ -28,7 +28,7 @@ namespace _0.Tests.Tests._LeetCode_Easy
 
         public void OrderedStream_Test()
         {
-            _display.DisplayListOfString.DisplayResult(_orderedStream.Insert(1, "aaa"));
+            _display.DisplayString.DisplayResult(_orderedStream.Insert(1, "aaa"));
         }
 
         public void ParkingSystem_Test()

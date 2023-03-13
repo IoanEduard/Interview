@@ -2,7 +2,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 {
     public class CheckIfNumberHasEqualDigitCountAndDigitValue
     {
-        public static bool DigitCount1(string num)
+        public bool DigitCount1(string num)
         {
             var dict = new Dictionary<int, int>();
 
@@ -30,7 +30,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return true;
         }
 
-        public static bool DigitCount(string num)
+        public bool DigitCount(string num)
         {
             var arr = new int[10];
 

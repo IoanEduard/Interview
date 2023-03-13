@@ -4,7 +4,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Arrays
 {
     public class DestinationCity
     {
-        public static string DestCity(IList<IList<string>> paths)
+        public string DestCity(IList<IList<string>> paths)
         {
             var hashtable = new Hashtable();
             var result = string.Empty;

@@ -2,7 +2,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Arrays
 {
     public class SumOfAllOddLengthSubarrays
     {
-        public static int SumOddLengthSubarrays2(int[] arr)
+        public int SumOddLengthSubarrays2(int[] arr)
         {
             var k = 1;
             var sum = 0;
@@ -23,7 +23,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Arrays
             return sum;
         }
 
-        public static int SumOddLengthSubarrays(int[] arr)
+        public int SumOddLengthSubarrays(int[] arr)
         {
             var sum = 0;
 

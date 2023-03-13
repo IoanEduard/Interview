@@ -1,10 +1,11 @@
 
+using _LeetCode_Easy.Interfaces;
+
 namespace _LeetCode_Easy.Concrete
 {
-    // Look after multiple solutions, read the code, read the text, implement.
-    public class ToImprove
+    public class ToImprove : IToImprove
     {
-        public static IList<string> CommonChars(string[] words)
+        public IList<string> CommonChars(string[] words)
         {
             var dict = new Dictionary<char, int>();
             var tempDictionary = new Dictionary<char, int>();
@@ -59,7 +60,7 @@ namespace _LeetCode_Easy.Concrete
             return list;
         }
 
-        public static string[] FindWords(string[] words)
+        public string[] FindWords(string[] words)
         {
             var hash1 = new HashSet<char> { 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p' };
             var hash2 = new HashSet<char> { 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l' };

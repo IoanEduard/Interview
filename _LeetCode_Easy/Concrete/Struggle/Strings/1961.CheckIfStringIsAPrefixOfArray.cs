@@ -5,7 +5,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
     public class CheckIfStringIsAPrefixOfArray
     {
         // Almost
-        public static bool IsPrefixString0(string s, string[] words)
+        public bool IsPrefixString0(string s, string[] words)
         {
             var arr = new char[s.Length];
 
@@ -22,7 +22,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 
             return new string(arr).Equals(s);
         }
-        public static bool IsPrefixString(string s, string[] words)
+        public bool IsPrefixString(string s, string[] words)
         {
             var stringbuilder = new StringBuilder();
 

@@ -4,7 +4,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 {
     public class WordPattern
     {
-        public static bool WordPattern0(string pattern, string s)
+        public bool WordPattern0(string pattern, string s)
         {
             var words = s.Split(' '); ;
             var dictionary = new Dictionary<char, string>();
@@ -24,7 +24,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return true;
         }
 
-        public static bool WordPattern1(string pattern, string s)
+        public bool WordPattern1(string pattern, string s)
         {
             var words = s.Split(' ');
             if (words.Length != pattern.Length)

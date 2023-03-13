@@ -2,7 +2,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 {
     public class CellsInARangeOnAnExcelSheet
     {
-        public static IList<string> CellsInRange(string s)
+        public IList<string> CellsInRange(string s)
         {
             char leftLetter = s[0];
             char rightLetter = s[3];

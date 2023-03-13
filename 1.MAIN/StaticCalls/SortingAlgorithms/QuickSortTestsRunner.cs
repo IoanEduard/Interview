@@ -13,7 +13,7 @@ namespace _1.Main.StaticCalls.SortingAlgorithms
             _tests = new Tests(new DisplayTypeInstantiator(), new QuickSort());
         }
 
-        public void RunQuickSortTests()
+        public void RunTests()
         {
             _tests.QuickSort_Test1();
             _tests.QuickSort_Test2();

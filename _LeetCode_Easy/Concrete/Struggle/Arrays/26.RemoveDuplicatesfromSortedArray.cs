@@ -4,7 +4,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Arrays
     {
          // Failed attempt
 
-        public static int RemoveDuplicates2(int[] nums)
+        public int RemoveDuplicates2(int[] nums)
         {
             var j = 0;
             for (int i = 0; i < nums.Length; i++)
@@ -21,7 +21,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Arrays
             return j;
         }
 
-        public static int RemoveDuplicates(int[] nums)
+        public int RemoveDuplicates(int[] nums)
         {
             var j = 0;
 

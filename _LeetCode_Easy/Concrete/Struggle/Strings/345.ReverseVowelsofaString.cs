@@ -3,7 +3,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
     public class ReverseVowelsofaString
     {
         // Good solution
-        public static string ReverseVowels(string s)
+        public string ReverseVowels(string s)
         {
             var left = 0;
             var right = s.Length - 1;
@@ -39,7 +39,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
         // Fail
         // I tried to avoid using .Contains or .IndexOf but I ran into spaghetti code and I had troubles with the length
         // I think it would be easier to do an extension method to mimic indexOf rather than doing this.
-        public static string ReverseVowels1(string s)
+        public string ReverseVowels1(string s)
         {
             var left = 0;
             var right = s.Length - 1;

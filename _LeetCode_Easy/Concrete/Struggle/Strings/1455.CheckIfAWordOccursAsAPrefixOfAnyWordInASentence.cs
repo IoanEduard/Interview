@@ -2,7 +2,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
 {
     public class CheckIfAWordOccursAsAPrefixOfAnyWordInASentence
     {
-        public static int IsPrefixOfWord0(string sentence, string searchWord)
+        public int IsPrefixOfWord0(string sentence, string searchWord)
         {
             var words = sentence.Split(' ');
 
@@ -27,7 +27,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.Strings
             return -1;
         }
 
-        public static int IsPrefixOfWord(string sentence, string searchWord)
+        public int IsPrefixOfWord(string sentence, string searchWord)
         {
             var words = sentence.Split(' ');
 

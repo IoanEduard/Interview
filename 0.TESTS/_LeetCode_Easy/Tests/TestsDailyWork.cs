@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _0.Tests.Tests._LeetCode_Easy
+namespace _0.Tests._LeetCode_Easy.Tests
 {
-    public class TestsStruggle
+    public class TestsDailyWork
     {
         
     }
