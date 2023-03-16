@@ -2,7 +2,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.PrefixSum
 {
     public class FindThePivotInteger
     {
-        public static int PivotInteger(int n)
+        public int PivotInteger(int n)
         {
             var prefixSumOfN = new int[n];
             var sum = 0;

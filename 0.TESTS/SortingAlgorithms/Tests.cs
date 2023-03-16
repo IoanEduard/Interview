@@ -1,10 +1,9 @@
 using _2.Printer.Concrete;
 using _3.SortingAlgorithms.Interfaces.Abstract;
-using static _0.Tests.SortingAlgorithms.TestCases;
 
 namespace _0.Tests.SortingAlgorithms
 {
-    public class Tests : IQuickSortTests
+    public class Tests : TestCases, IQuickSortTests
     {
         private readonly DisplayTypeInstantiator _display;
         private readonly SortingStrategy<int> _sortingStrategy;

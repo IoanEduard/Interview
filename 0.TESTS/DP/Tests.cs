@@ -3,7 +3,7 @@ using DynamicProgramming.Interfaces;
 
 namespace _0.Tests.DP
 {
-    public class Tests
+    public class Tests : TestCases
     {
         private readonly IDisplay<int> _display;
         private readonly IDisplay<string> _displayString;

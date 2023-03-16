@@ -1,9 +1,8 @@
 using _2.Printer.Concrete;
-using static _0.Tests._LeetCode_Easy.Tests.Struggle.Misc.TestCases;
 
 namespace _0.Tests._LeetCode_Easy.Tests.Struggle.Misc
 {
-    public class TestsStruggleMisc
+    public class TestsStruggleMisc : TestCases
     {
         private readonly TestsStruggleMiscClassFactory _tests;
         private readonly DisplayTypeInstantiator _display;

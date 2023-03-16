@@ -10,3 +10,19 @@ To generate the next number of the sequence, we sum the previous two
 e.g. n = 7
 n:      1,2,3,4,5,6,7,8,9
 fib(n): 1,1,2,3,5,8,13,21,34
+
+Tabulation Recipe
+visualize the problem as a table
+size the table based on the inputs
+initialize the table with default values
+seed the trivial answer into the table
+iterate through the table
+fill further positions based on the current position
+
+// https://www.johncanessa.com/2021/06/10/can-sum-tabulation/
+// https://www.youtube.com/watch?v=oBt53YbR9Kk&t=5105s
+https://gist.github.com/Sethuram52001/b331994aacaa78f4fa9ec8799ab29191#file-canconstructtabulation-java
+https://github.com/irfan7junior/algorithms-in-java/blob/master/dynamic_programming/tabulation/CanConstructTab.java
+https://onecompiler.com/java/3wtvycufb
+https://sethuram52001.medium.com/dp-decision-problem-using-tabulation-9beacac086d2
+Garbage -> https://www.johncanessa.com/2021/06/17/can-construct-tabulation/

@@ -1,11 +1,11 @@
+using _0.Tests._LeetCode_Easy;
 using _2.Printer.Concrete;
 using _LeetCode_Easy.Concrete.LowAcceptanceRate;
 using _LeetCode_Easy.Interfaces;
-using static _0.Tests._LeetCode_Easy._TestsCases;
 
 namespace _0.Tests.Tests._LeetCode_Easy.Interfaces
 {
-    public class TestsLowAcceptanceRate
+    public class TestsLowAcceptanceRate : _TestsCases
     {
         private readonly DisplayTypeInstantiator _display;
         private readonly ILowAcceptanceRate _lowAcceptanceRate;

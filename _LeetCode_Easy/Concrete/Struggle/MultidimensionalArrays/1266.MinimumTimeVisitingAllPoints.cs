@@ -2,7 +2,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.MultidimensionalArrays
 {
     public class MinimumTimeVisitingAllPoints
     {
-        public static int MinTimeToVisitAllPoints(int[][] points)
+        public int MinTimeToVisitAllPoints(int[][] points)
         {
             var sum = 0;
 

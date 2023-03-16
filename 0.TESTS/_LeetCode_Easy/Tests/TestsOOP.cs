@@ -1,10 +1,10 @@
+using _0.Tests._LeetCode_Easy;
 using _2.Printer.Concrete;
 using _LeetCode_Easy.Concrete.DesignOOP;
-using static _0.Tests._LeetCode_Easy._TestsCases;
 
 namespace _0.Tests.Tests._LeetCode_Easy
 {
-    public class TestsOOP
+    public class TestsOOP : _TestsCases
     {
         private readonly DisplayTypeInstantiator _display;
         private readonly Codec _codec;

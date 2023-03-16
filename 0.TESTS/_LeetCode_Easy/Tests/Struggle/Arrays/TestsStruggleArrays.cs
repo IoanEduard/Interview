@@ -1,10 +1,10 @@
 using _0.Tests._LeetCode_Easy.Tests.Struggle.Arrays;
+using _0.Tests._LeetCode_Easy.Tests.Struggle.Arrays.TestCases;
 using _2.Printer.Concrete;
-using static _0.Tests._LeetCode_Easy.Tests.Struggle.Arrays.TestCases;
 
 namespace _0.Tests.Tests.Struggle.Arrays
 {
-    public class TestsStruggleArrays
+    public class TestsStruggleArrays : TestCases
     {
         private readonly TestArraysStruggleClassFactory _tests;
         private readonly DisplayTypeInstantiator _display;

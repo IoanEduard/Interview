@@ -3,7 +3,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.MultidimensionalArrays
     public class FlippingAnImage
     {
          // Most likely I cheated because of the XOR operator 
-        public static int[][] FlipAndInvertImage(int[][] image)
+        public int[][] FlipAndInvertImage(int[][] image)
         {
 
             for (int i = 0; i < image.Length; i++)

@@ -3,7 +3,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.MultidimensionalArrays
     public class CheckIfEveryRowAndColumnContainsAllNumbers
     {
         // First Attempt, didn't passed all testcases
-        public static bool CheckValid(int[][] matrix)
+        public bool CheckValid(int[][] matrix)
         {
             var desiredSum = matrix[0].Length * (matrix[0].Length + 1) / 2;
             var colSum = 0;
@@ -27,7 +27,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.MultidimensionalArrays
             return true;
         }
 
-         public static bool CheckValid2(int[][] matrix)
+         public bool CheckValid2(int[][] matrix)
         {
             for (int i = 0; i < matrix.Length; i++)
             {

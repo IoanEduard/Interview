@@ -1,12 +1,11 @@
+using _0.Tests._LeetCode_Easy;
 using _2.Printer.Concrete;
 using _LeetCode_Easy.Concrete;
 using _LeetCode_Easy.Interfaces;
 
-using static _0.Tests._LeetCode_Easy._TestsCases;
-
 namespace _0.Tests.Tests._LeetCode_Easy
 {
-    public class TestsProblemsToImprove
+    public class TestsProblemsToImprove : _TestsCases
     {
         private readonly DisplayTypeInstantiator _display;
         private readonly IToImprove _toImprove;

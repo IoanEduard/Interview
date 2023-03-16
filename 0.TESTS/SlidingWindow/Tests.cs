@@ -1,11 +1,10 @@
 using _0.Tests.SlidingWindow.Interfaces;
 using _2.Printer.Concrete;
 using _4.SlidingWindow.Interfaces;
-using static _0.Tests.SlidingWindow.TestCases;
 
 namespace _0.Tests.SlidingWindow
 {
-    public class Tests : ISlidingWindow_Tests
+    public class Tests : TestCases, ISlidingWindow_Tests
     {
         private readonly ISlidingWindowProblems _problems;
         private readonly DisplayTypeInstantiator _display;

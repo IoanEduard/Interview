@@ -1,25 +1,10 @@
-using _0.Tests._LeetCode_Easy.Tests.Struggle.BitManipulation;
-using _0.Tests._LeetCode_Easy.Tests.Struggle.Misc;
-using _0.Tests._LeetCode_Easy.Tests.Struggle.Strings;
-using _0.Tests.Tests.Struggle.Arrays;
-using _2.Printer.Concrete;
+
+using _1.Main.StaticCalls._LeetCode_Easy.Helper;
 
 namespace _1.Main.StaticCalls._LeetCode_Easy
 {
-    public class StruggleProblemsTestRunner
+    public class StruggleProblemsTestRunner : StruggleProblemsTestRunnerInitializer
     {
-        private readonly TestsStruggleArrays _testsArrays;
-        private readonly TestsStruggleBitManipulation _testsBitManipulation;
-        private readonly TestsStruggleStrings _testsStruggleStrings;
-        private readonly TestsStruggleMisc _testsStruggleMisc;
-
-        public StruggleProblemsTestRunner()
-        {
-            _testsArrays = new TestsStruggleArrays(new DisplayTypeInstantiator());
-            _testsBitManipulation = new TestsStruggleBitManipulation(new DisplayTypeInstantiator());
-            _testsStruggleMisc = new TestsStruggleMisc(new DisplayTypeInstantiator());
-            _testsStruggleStrings = new TestsStruggleStrings(new DisplayTypeInstantiator());
-        }
         public void RunTests_Arrays()
         {
             _testsArrays.RemoveDuplicatesfromSortedArray_Test();
@@ -49,6 +34,19 @@ namespace _1.Main.StaticCalls._LeetCode_Easy
             _testsStruggleStrings.CountPrefixesOfAGivenString_Tests();
             _testsStruggleStrings.ReverseVowelsofaString_Tests();
             _testsStruggleStrings.WordPattern_Tests();
+        }
+        public void RunTests_PrefixSum()
+        {
+            _testsStrugglePrefixSum.PivotInteger_Tests();
+        }
+
+        public void RunTests_MultidimensionalArrays()
+        {
+            _testsMultidimensionalArrays.CellsWithOddValuesInAMatrix_Tests();
+            _testsMultidimensionalArrays.CheckIfEveryRowAndColumnContainsAllNumbers_Tests();
+            _testsMultidimensionalArrays.FlippingAnImage_Tests();
+            _testsMultidimensionalArrays.MinimumTimeVisitingAllPoints_Tests();
+            _testsMultidimensionalArrays.TheKWeakestRowsInAMatrix_Tests();
         }
     }
 }

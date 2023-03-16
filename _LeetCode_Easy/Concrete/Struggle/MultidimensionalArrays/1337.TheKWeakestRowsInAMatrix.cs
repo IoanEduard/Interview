@@ -2,7 +2,7 @@ namespace _LeetCode_Easy.Concrete.Struggle.MultidimensionalArrays
 {
     public class TheKWeakestRowsInAMatrix
     {
-        public static int[] KWeakestRows(int[][] mat, int k)
+        public int[] KWeakestRows(int[][] mat, int k)
         {
             var dictionaryRowSoldierCount = new Dictionary<int, int>();
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using DynamicProgramming.Interfaces;
 
 namespace _15.DynamicProgramming.FreeCodeCamp.Concrete.Documentation
@@ -16,7 +17,7 @@ namespace _15.DynamicProgramming.FreeCodeCamp.Concrete.Documentation
             return Fibbonaci(n, new Dictionary<int, int>());
         }
 
-        public int FibDP(int n)
+        public int FibTabulation(int n)
         {
             if (n == 0) return 0;
             if (n == 1 || n == 2) return 1;
@@ -48,7 +49,7 @@ namespace _15.DynamicProgramming.FreeCodeCamp.Concrete.Documentation
             return ShortestPathRecursive(n, m, new Dictionary<Tuple<int, int>, int>());
         }
 
-        public int ShortestPathIterativeLeetCode1(int m, int n)
+        public int ShortestPathTabulation(int m, int n)
         {
             var result = new int[m, n];
 
@@ -336,14 +337,346 @@ namespace _15.DynamicProgramming.FreeCodeCamp.Concrete.Documentation
             return totalCount;
         }
 
-        public List<string>? AllConstruct(string word, string[] words)
+        public List<List<string>>? AllConstruct(string word, string[] words)
         {
-            throw new NotImplementedException();
+            var result = new List<List<string>>();
+
+            if (word == "")
+                return new List<List<string>>();
+
+            foreach (var w in words)
+            {
+                if (word.IndexOf(w) == 0)
+                {
+                    var suffix = word.Substring(w.Length);
+                    var suffixWays = AllConstruct(suffix, words);
+
+                    if (suffixWays != null)
+                    {
+                        var list = new List<string>();
+                        list.Add(w);
+
+                        if (suffixWays.Count > 0)
+                        {
+                            list.AddRange(suffixWays[0]);
+                        }
+                        result.AddRange(new List<List<string>>() { list });
+                    }
+                }
+            }
+
+            if (result.Count == 0)
+                return null;
+
+            return result;
         }
 
-        public List<string>? AllConstruct(string word, string[] words, Dictionary<string, List<string>>? memo)
+        public List<List<string>>? AllConstruct(string word, string[] words, Dictionary<string, List<List<string>>>? memo)
         {
-            throw new NotImplementedException();
+            if (memo!.ContainsKey(word))
+                return memo[word];
+
+            var result = new List<List<string>>();
+
+            if (word == "")
+                return new List<List<string>>();
+
+            foreach (var w in words)
+            {
+                if (word.IndexOf(w) == 0)
+                {
+                    var suffix = word.Substring(w.Length);
+                    var suffixWays = AllConstruct(suffix, words, memo);
+
+                    if (suffixWays != null)
+                    {
+                        var list = new List<string>();
+                        list.Add(w);
+
+                        if (suffixWays.Count > 0)
+                        {
+                            list.AddRange(suffixWays[0]);
+                        }
+                        result.AddRange(new List<List<string>>() { list });
+                    }
+                }
+            }
+
+            if (result.Count == 0)
+            {
+                memo[word] = null!;
+                return null;
+            }
+
+            memo[word] = result;
+
+            return result;
+        }
+
+        public bool CanSumTabulation(int n, int[] numbers)
+        {
+            var table = new bool[n + 1];
+            table[0] = true;
+
+            for (var i = 0; i <= n; i++)
+            {
+                if (table[i])
+                {
+                    foreach (var num in numbers)
+                    {
+                        if (i + num <= n)
+                            table[i + num] = true;
+                    }
+                }
+            }
+
+            return table[n];
+        }
+
+        public List<int>? HowSumTabulation(int n, int[] numbers)
+        {
+            if (n == 0) return null;
+
+            var table = new ArrayList[n + 1];
+
+            table[0] = new ArrayList();
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                var al = new ArrayList();
+                int nums = numbers[i];
+                al.Add(nums);
+                table[nums] = al;
+            }
+
+            for (int i = 1; i <= n; i++)
+            {
+                if (table[i] == null)
+                    continue;
+
+                for (int j = 0; j < numbers.Length; j++)
+                {
+                    int num = numbers[j];
+                    int ndx = i + num;
+
+                    if (ndx > n)
+                        continue;
+
+                    if (table[ndx] == null)
+                        table[ndx] = new ArrayList();
+
+                    ArrayList src = table[i];
+                    ArrayList dst = table[ndx];
+
+                    dst.Clear();
+                    dst.AddRange(src);
+                    dst.Add(num);
+
+                    if (ndx == n)
+                    {
+                        int[] ar = (int[])dst.ToArray(typeof(int));
+
+                        return ar.ToList();
+                    }
+                }
+            }
+
+            if (table[n] == null) return null;
+
+            var lst = table[n];
+
+            int[] arr = (int[])lst.ToArray(typeof(int));
+
+            return arr.ToList();
+        }
+
+        public ArrayList HowSumTab2(int target, int[] numbers)
+        {
+            ArrayList[] tab = new ArrayList[(int)target + 1];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                var al = new ArrayList();
+                int nums = numbers[i];
+                al.Add(nums);
+                tab[nums] = al;
+            }
+
+            tab[0] = new ArrayList();
+
+            for (int i = 0; i <= target; i++)
+            {
+                if (tab[i] != null)
+                {
+                    for (int j = 0; j < numbers.Length; j++)
+                    {
+                        if (i + numbers[j] <= target)
+                        {
+                            tab[i + (int)numbers[j]] = new ArrayList(tab[i]);
+                            tab[i + (int)numbers[j]].Add(numbers[j]);
+                        }
+                    }
+                }
+            }
+
+            return tab[(int)target];
+        }
+
+        public ArrayList BestSumTabulation(int n, int[] numbers)
+        {
+            ArrayList[] tab = new ArrayList[(int)n + 1];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                var al = new ArrayList();
+                int nums = numbers[i];
+                al.Add(nums);
+                tab[nums] = al;
+            }
+
+            for (int i = 0; i <= n; i++)
+            {
+                if (tab[i] != null)
+                {
+                    foreach (long number in numbers)
+                    {
+                        if (i + number <= n)
+                        {
+                            if (tab[i + (int)number] != null)
+                            {
+                                if (tab[i + (int)number].Count >= tab[i].Count + 1)
+                                {
+                                    tab[i + (int)number] = new ArrayList(tab[i]);
+                                    tab[i + (int)number].Add(number);
+                                }
+                            }
+                            else
+                            {
+                                tab[i + (int)number] = new ArrayList(tab[i]);
+                                tab[i + (int)number].Add(number);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return tab[(int)n];
+        }
+
+        public bool CanConstructTabulation0(string target, string[] words)
+        {
+            var table = new bool[target.Length + 1];
+            table[0] = true;
+
+            for (var i = 0; i < target.Length; i++)
+            {
+                if (table[i])
+                {
+                    for (var j = 0; j < words.Length; j++)
+                    {
+                        var word = words[j];
+
+                        if (i + word.Length >= table.Length)
+                            continue;
+
+                        if (target.Substring(i, i + word.Length) == word)
+                        {
+                            table[i + word.Length] = true;
+                        }
+                    }
+
+                    if (table[target.Length])
+                        return true;
+                }
+            }
+
+            return table[target.Length];
+        }
+
+        public bool CanConstructTabulation(string target, string[] wordBank)
+        {
+            var dict = new Dictionary<int, bool>();
+
+            for (var i = 0; i < target.Length + 1; i++)
+            {
+                dict.Add(i, false);
+            }
+
+            dict[0] = true;
+
+            for (int i = 0; i < target.Length; i++)
+            {
+                if (dict[i])
+                {
+                    foreach (var word in wordBank)
+                    {
+                        if (target.Substring(i).IndexOf(word) == 0)
+                        {
+                            dict[i + word.Length] = true;
+                        }
+                    }
+                }
+            }
+
+            return dict[target.Length];
+        }
+
+        public int CountCounstructTabulation(string target, string[] wordBank)
+        {
+            var dict = new Dictionary<int, int>();
+
+            for (var i = 0; i < target.Length + 1; i++)
+            {
+                dict.Add(i, 0);
+            }
+
+            dict[0] = 1;
+
+            for (int i = 0; i < target.Length; i++)
+            {
+                foreach (var word in wordBank)
+                {
+                    if (target.Substring(i).IndexOf(word) == 0)
+                    {
+                        dict[i + word.Length] += dict[i];
+                    }
+                }
+            }
+
+
+            return dict[target.Length];
+        }
+
+        public List<List<string>> AllCounstructTabulation(string target, string[] wordBank)
+        {
+            var dict = new Dictionary<int, List<List<string>>>();
+
+            for (var i = 0; i < target.Length + 1; i++)
+            {
+                dict.Add(i, new List<List<string>>());
+            }
+
+            for (int i = 0; i < target.Length; i++)
+            {
+                foreach (var word in wordBank)
+                {
+                    if (target.Substring(i).IndexOf(word) == 0)
+                    {
+                        var suffixWays = dict[word.Length];
+                        var newCombinations = new List<List<string>>();
+                        var subArray = new List<string>();
+
+                        subArray.Add(word);
+                        newCombinations.Add(subArray);
+
+                   
+                            newCombinations.AddRange(suffixWays);
+                        
+
+                        dict[i + word.Length].AddRange(newCombinations);
+                    }
+                }
+            }
+
+            return dict[target.Length];
         }
     }
 }

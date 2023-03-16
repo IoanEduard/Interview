@@ -1,5 +1,10 @@
+using System.Collections;
+
 namespace DynamicProgramming.Interfaces
 {
+    /// <summary>
+    /// https://www.youtube.com/watch?v=oBt53YbR9Kk
+    /// </summary>
     public interface IFreecodeCampDP
     {
         /// <summary>
@@ -138,7 +143,6 @@ namespace DynamicProgramming.Interfaces
         /// <param name="n"></param>
         /// <returns></returns>
         int ShortestPathMemoization(int m, int n);
-        int ShortestPathIterativeLeetCode1(int m, int n);
         /// <summary>
         /// SOURCE:
         /// <para>General explanations and versions of this problem</para>
@@ -286,15 +290,41 @@ namespace DynamicProgramming.Interfaces
         /// <param name="word"></param>
         /// <param name="words"></param>
         /// <returns></returns>
-        List<string>? AllConstruct(string word, string[] words);
+        List<List<string>>? AllConstruct(string word, string[] words);
 
         /// <summary>
-        /// 
+        /// m = target.length
+        /// n = words.length
+        /// Can be presented as a tree, we generte subarrays for each path
+        /// O(n^m) exponential time
+        /// O(m) exponential time, height of the recursion tree
         /// </summary>
         /// <param name="word"></param>
         /// <param name="words"></param>
         /// <param name="memo)"></param>
         /// <returns></returns>
-        List<string>? AllConstruct(string word, string[] words, Dictionary<string, List<string>>? memo);
+        List<List<string>>? AllConstruct(string word, string[] words, Dictionary<string, List<List<string>>>? memo);
+
+        int FibTabulation(int n);
+        int ShortestPathTabulation(int m, int n);
+
+        bool CanSumTabulation(int n, int[] numbers);
+        List<int>? HowSumTabulation(int n, int[] numbers);
+        ArrayList HowSumTab2(int target, int[] numbers);
+
+        /// <summary>
+        /// https://github.com/JohnCanessa/BestSumTabulation
+        /// https://github.com/DevoGHub/FreeCodeCamp-DynamicProgramming-Java/blob/main/HowSum.java
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="numbers"></param>
+        /// <returns></returns>
+        ArrayList BestSumTabulation(int n, int[] numbers);
+
+        bool CanConstructTabulation(string target, string[] wordBank);
+
+        int CountCounstructTabulation(string target, string[] wordBank);
+
+        List<List<string>> AllCounstructTabulation(string target, string[] wordBank);
     }
 }

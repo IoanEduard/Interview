@@ -1,9 +1,8 @@
 using _2.Printer.Concrete;
-using static _0.Tests._LeetCode_Easy.Tests.Struggle.BitManipulation.TestCases;
 
 namespace _0.Tests._LeetCode_Easy.Tests.Struggle.BitManipulation
 {
-    public class TestsStruggleBitManipulation
+    public class TestsStruggleBitManipulation : TestCases
     {
         private readonly TestsStruggleBitManipulationClassFactory _tests;
         private readonly DisplayTypeInstantiator _display;

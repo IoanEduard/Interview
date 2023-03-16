@@ -10,6 +10,7 @@
     <ProjectReference Include="..\14.Trees\14.Trees.csproj" />
     <ProjectReference Include="..\15.DynamicProgramming\15.DynamicProgramming.csproj" />
     <ProjectReference Include="..\7.LinkedLists\7.LinkedLists.csproj" />
+    <ProjectReference Include="..\6.Recursion\6.Recursion.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
