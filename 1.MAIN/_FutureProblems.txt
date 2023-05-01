@@ -1,0 +1,234 @@
+DP
+https://leetcode.com/tag/dynamic-programming/
+
+Trees
+https://leetcode.com/tag/binary-tree/
+
+Trie
+https://leetcode.com/tag/trie/
+
+Strings
+https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
+
+Arrays
+https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
+
+SlidingWindow
+https://medium.com/techie-delight/top-problems-on-sliding-window-technique-8e63f1e2b1fa
+
+Top Problems:
+https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/?ref=rp
+
+SQL
+https://www.w3resource.com/sql-exercises/
+leetcode, hackerrank, others
+
+BackTracking
+https://leetcode.com/tag/backtracking/
+
+Maybe:
+https://leetcode.com/problems/construct-quad-tree/
+https://leetcode.com/problems/operations-on-tree/
+
+Big maybe (HARD)
+https://leetcode.com/problems/tree-of-coprimes/
+
+TO DO:
+1. Linked Lists 
+    https://www.youtube.com/watch?v=Hj_rA0dhr2I
+2. SQL
+    https://www.simplilearn.com/tutorials/sql-tutorial/datediff-in-sql
+    https://www.w3resource.com/sql-exercises/sql-retrieve-from-table.php
+    https://medium.com/basecs/set-theory-the-method-to-database-madness-5ec4b4f05d79
+
+3. Design Patterns
+    https://gist.github.com/Nilzor/3012094
+    https://refactoring.guru/design-patterns/factory-method/csharp/example#:~:text=Factory%20method%20is%20a%20creational,constructor%20call%20(%20new%20operator).
+    https://www.youtube.com/watch?v=tAuRQs_d9F8
+
+4. Interview Questions
+    https://www.youtube.com/watch?v=Peq4GCPNC5c
+    
+5. DP
+    https://leetcode.com/discuss/career/3455126/50-questions-to-master-DP
+    https://github.com/JohnCanessa/HowSumTabulation/blob/main/HowSumTabulation.java
+    https://www.cesarsotovalero.net/blog/dynamic-programming-classics.html
+    https://medium.com/@stephanie.jinzi.yan/4-key-points-of-dp-and-coordinate-dp-b7f5c79dfaaf
+    https://medium.com/basecs/speeding-up-the-traveling-salesman-using-dynamic-programming-b76d7552e8dd
+    https://medium.com/basecs/less-repetition-more-dynamic-programming-43d29830a630
+    https://www.youtube.com/watch?v=P8Xa2BitN3I
+    https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/
+    https://www.youtube.com/watch?v=OQ5jsbhAv_M
+    https://www.geeksforgeeks.org/overlapping-subproblems-property-in-dynamic-programming-dp-1/
+
+6. Binary Search
+    https://blog.tylerhou.io/posts/binary-search-with-confidence/
+    https://leetcode.com/problems/successful-pairs-of-spells-and-potions/description/
+    https://leetcode.com/problems/minimize-maximum-of-array/
+
+7. Graphs 
+    https://www.youtube.com/watch?v=09_LlHjoEiY&t=4s
+    7.1 Priority Queue: 
+        https://www.geeksforgeeks.org/indexed-priority-queue-with-implementation/
+    7.2 Topological Sort
+        https://medium.com/@stephanie.jinzi.yan/topological-sorting-60f58d88e805
+
+    file:///C:/Users/Eduard/Downloads/graph_theory_algorithms.pdf
+    https://www.youtube.com/watch?v=dS44jZyj5gU
+    https://www.youtube.com/watch?v=tWVWeAqZ0WU
+    https://www.programiz.com/dsa/graph-adjacency-list
+    https://www.geeksforgeeks.org/depth-first-traversal-dfs-on-a-2d-array/
+    https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+    https://www.udemy.com/course/amazing-graph-algorithms-coding-in-javajavascript-python/
+
+8. Jenny videos - Data Structures
+    https://www.youtube.com/@JennyslecturesCSIT
+
+9. Lalita Videos - Graphs, Trees, Tries
+    https://www.youtube.com/@LalithaNatraj
+
+11. Trees
+    11.1 Binary Trees
+        https://medium.com/@stephanie.jinzi.yan/binary-tree-divide-conquer-traverse-227423d9f19d
+        https://medium.com/@stephanie.jinzi.yan/breadth-fist-search-of-a-binary-tree-d29b3fa6d03f
+
+    https://medium.com/basecs/breaking-down-breadth-first-search-cebe696709d9
+    https://medium.com/@stephanie.jinzi.yan/data-structure-tree-97eaa2c4208b
+
+    11.2 Tries
+        https://medium.com/basecs/trying-to-understand-tries-3ec6bede0014
+
+12. Heap
+    https://endjin.com/blog/2022/07/understanding-the-stack-and-heap-in-csharp-dotnet
+
+https://www.youtube.com/watch?v=343EWZS9O88
+
+
+13. LINQ
+    https://www.youtube.com/watch?v=5l2qA3Pc83M
+
+14. Two Pointer
+15. MIT Courses
+    https://www.youtube.com/watch?v=r4-cftqTcdI
+
+16. Sorting
+    https://medium.com/@stephanie.jinzi.yan/merge-sort-and-quick-sort-afc9bf8f0f28
+    https://medium.com/@stephanie.jinzi.yan/common-sorting-algorithms-e73acca9631c
+    https://medium.com/basecs/pivoting-to-understand-quicksort-part-1-75178dfb9313
+
+17. Stack
+    https://medium.com/@stephanie.jinzi.yan/data-structure-queue-and-stack-c618a98852e6
+
+18. LinkedList
+    https://medium.com/basecs/whats-a-linked-list-anyway-part-1-d8b7e6508b9d
+
+others
+https://medium.com/@stephanie.jinzi.yan/introduction-of-alipay-and-wechatpay-95f3a66da046
+https://dev.to/alisabaj/solving-the-best-time-to-buy-and-sell-stocks-problem-in-one-pass-42in
+
+
+Problems I skipped:
+    https://leetcode.com/problems/number-of-closed-islands/
+        https://leetcode.com/problems/number-of-closed-islands/solutions/3384770/image-explanation-clean-generalized-code-c-java-python/
+        https://leetcode.com/problems/number-of-closed-islands/solutions/675737/short-simple-c-dfs-96-ms-faster-than-98-25-of-c/?q=brute+force&orderBy=most_relevant
+
+    https://leetcode.com/problems/largest-color-value-in-a-directed-graph/description/
+        https://leetcode.com/problems/largest-color-value-in-a-directed-graph/solutions/1199980/c-topological-sort-onion-peeling-algorithm-100/
+
+    https://leetcode.com/problems/clone-graph/
+    https://leetcode.com/problems/number-of-enclaves/description/
+    https://leetcode.com/problems/successful-pairs-of-spells-and-potions/editorial/
+
+    https://leetcode.com/problems/is-subsequence/solutions/1811180/c-easy-3-approaches-brute-force-recursive-memoization/?orderBy=hot
+
+    https://leetcode.com/problems/triangle/
+    https://leetcode.com/problems/smallest-number-in-infinite-set/description/
+    https://leetcode.com/problems/find-all-anagrams-in-a-string/?envType=study-plan&id=level-1
+    https://leetcode.com/problems/flood-fill/description/?envType=study-plan&id=level-1
+    https://leetcode.com/problems/number-of-islands/description/?envType=study-plan&id=level-1
+
+
+    https://leetcode.com/problems/similar-string-groups/description/
+tutorials
+https://www.youtube.com/watch?v=Ra0XHDTM-ts
+https://medium.com/@stephanie.jinzi.yan/binary-search-da1dda8e7408
+https://medium.com/@kojinoshiba/data-structures-in-python-series-1-linked-lists-d9f848537b4d
+https://github.com/kojino/data-structures-algorithms/blob/master/linked_list/p2.py
+https://www.codefellows.org/blog/implementing-a-singly-linked-list-in-python/
+https://medium.com/@deniswells59/singly-linked-lists-with-javascript-81859a5a5095
+https://www.studytonight.com/data-structures/introduction-to-linked-list
+http://quiz.geeksforgeeks.org/linked-list-set-1-introduction/
+https://itnext.io/creating-linked-lists-in-javascript-2980b0559324
+https://medium.com/coinmonks/linked-lists-in-solidity-cfd967af389b
+https://towardsdatascience.com/a-simple-introduction-to-data-structures-part-one-linked-lists-efbb13e9ad33
+https://mariam-jaludi.medium.com/data-structures-linked-lists-8f277b61cca
+https://codeburst.io/i-learned-all-data-structures-in-a-week-this-is-what-it-did-to-my-brain-547194ed5047
+https://medium.com/@ConnorFinnegan/a-beginners-guide-to-linked-lists-f047a4f929ae
+https://stackoverflow.com/questions/7496251/what-is-the-advantage-of-linked-list-over-an-array-and-vice-versa
+https://medium.com/basecs/whats-a-linked-list-anyway-part-1-d8b7e6508b9d
+
+https://www.youtube.com/watch?v=Hj_rA0dhr2I&t=109s
+https://www.youtube.com/watch?v=_GF-0T-YjW8
+https://www.youtube.com/results?search_query=Number+of+Ways+to+Form+a+Target+String+Given+a+Dictionary
+https://www.youtube.com/watch?v=MKfkxIkfFZg
+https://www.youtube.com/watch?v=Sa3tEYqLVjg
+https://medium.com/@ahmadseemapuri/sudoku-solver-185059753155
+
+https://leetcode.com/problems/validate-binary-search-tree/description/?envType=study-plan&id=level-1?envType=study-plan&id=level-1
+https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/?envType=study-plan&id=level-1
+https://leetcode.com/problems/validate-binary-search-tree/
+https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/description/
+https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
+https://www.geeksforgeeks.org/check-for-children-sum-property-in-a-binary-tree/
+
+https://www.youtube.com/watch?v=f72U91RJsN4
+
+https://docs.google.com/spreadsheets/d/1Ue4LnkdUN8pOQ8JR9lpxkRHTLdmpaEPrBp0rYBKGQrA/edit#gid=0
+
+https://yourbasic.org/algorithms/dynamic-programming-explained/#:~:text=Tabulation%20is%20an%20approach%20where,the%20results%20in%20this%20table.
+https://www.geeksforgeeks.org/tabulation-vs-memoization/
+https://www.geeksforgeeks.org/solve-dynamic-programming-problem/
+https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/
+https://www.geeksforgeeks.org/count-ways-reach-nth-stair/
+https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
+https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+https://www.geeksforgeeks.org/min-cost-path-dp-6/
+https://www.geeksforgeeks.org/subset-sum-problem-dp-25/
+https://www.geeksforgeeks.org/coin-change-dp-7/
+https://www.geeksforgeeks.org/edit-distance-dp-5/
+https://www.geeksforgeeks.org/cutting-a-rod-dp-13/
+https://www.geeksforgeeks.org/overlapping-subproblems-property-in-dynamic-programming-dp-1/
+https://www.baeldung.com/cs/tabulation-vs-memoization
+https://www.youtube.com/watch?v=4KdfomRGDAE
+https://www.youtube.com/watch?v=OMkKWtSAF0c
+https://www.youtube.com/watch?v=V3y6GW21lKE
+https://www.youtube.com/watch?v=NvVtXGFGMiU
+https://www.javatpoint.com/tabulation-vs-memoization
+https://programming.guide/dynamic-programming-vs-memoization-vs-tabulation.html
+https://betterprogramming.pub/a-systematic-approach-to-dynamic-programming-54902b6b0071
+https://medium.com/@aryan.jain19/memoization-vs-tabulation-in-dp-4ff137da8044
+https://jarednielsen.com/dynamic-programming-memoization-tabulation/
+http://web.mit.edu/15.053/www/AMP-Chapter-11.pdf
+https://www.youtube.com/watch?v=zDEQaDl3cso&t=1803s
+
+https://code-maze.com/csharp-priority-queue/
+https://www.youtube.com/watch?v=7z_HXFZqXqc
+
+https://www.youtube.com/watch?v=CB5BIXvsgv0
+
+http://www.crystaltenn.com/2019/04/algorithms-union-find-in-c.html
+https://www.youtube.com/watch?v=0jNmHPfA_yE
+https://medium.com/@shahidmanzoorbhat/union-find-algorithms-using-c-part-1-a1b9ea6c8b9
+https://medium.com/@shahidmanzoorbhat/union-find-algorithms-using-c-part-3-7bf95fad3c56
+https://medium.com/@shahidmanzoorbhat/union-find-algorithms-using-c-part-2-7ca937475e1f
+https://leetcode.com/problems/smallest-string-with-swaps/description/
+https://leetcode.com/problems/similar-string-groups/
+https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/
+https://www.youtube.com/watch?v=ayW5B2W9hfo
+https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths/description/
+https://www.youtube.com/watch?v=SL357TC6zpY
+
+https://medium.com/@shahidmanzoorbhat/levenshtein-distance-in-c-bb6781bae944
+
+
+

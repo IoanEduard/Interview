@@ -1,0 +1,72 @@
+Cg (v,e)
+   spanning tree of this graph would contain
+      G'(v', e')
+
+   relationship is:
+   v' = v
+   difference is in the number of edges
+   e' subset of e
+   e' = |v| - 1 
+   edges equal vertexes - 1
+
+   A graph can have more than 1 spanning tree
+      lets say edges have weights
+      the minimum spanning tree is with minimum sum of weights 
+
+            1
+          /   \
+         /     \
+        /       \
+       2         5
+        \        |
+         \       |
+          \      |
+           3 --- 4
+
+   spanning tree is vertexes minus 1
+   e.g 1
+
+            1
+          /   \
+       1 /     \ 2
+        /       \
+       2         5        Sum = 11
+        \        |
+       5 \       | 3
+          \      |
+           3     4
+
+   e.g 2
+
+            1
+          /   \
+       1 /     \ 2
+        /       \
+       2         5        Sum = 10
+                 |
+                 | 3
+              4  |
+           3 --- 4
+           
+   Minimum spanning tree properties:
+      - should not contain cycles or be disconnected
+      - removing one edge from ST will make it disconnected
+      - adding one edge to the ST will make it a loop
+      - if each edge has distinct weights then there will be only one unique MST
+      - a complete undirected graph can have n^n-2 no. of ST
+      - every connected and undirected graph has at least one ST
+      - disconnected graph does not have any ST
+      - from complete graph by removing max(e-n+1) edges we can construct a ST
+
+                          1                  1               1
+                         / \         =>     /       =>        \
+                        /   \              /                   \
+                       2     3            2 --- 3         2 --- 3
+
+         e-n+1 = 3 - 3 + 1 = 1
+
+
+         For 4 edges
+         n^n-2 = 4^4-2 = 16 possible ST
+
+         e-n+1 = 6-4+1 = 3 we can remove maximum 3 edges

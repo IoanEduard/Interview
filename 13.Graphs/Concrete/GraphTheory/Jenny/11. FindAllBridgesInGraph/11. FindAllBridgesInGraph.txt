@@ -1,0 +1,110 @@
+A bridge is an edge that by removing will increase the maximum of connected components in a graph
+
+   We find the bridges with DFS Traversal
+       
+        ----------
+       |           \ 
+       | st = 5     \
+       b ------ e    \     
+      /|        |     \    
+     / |        |      \   
+6/7 /  |        |       \  
+   a   |        |        \
+    \  |        |         |
+     \ |        |         |
+      \| st = 4 | st =1   |
+       c ------ d ------- f st = 2
+       | \               /
+       |  \             /
+       |   \           /
+       |    \         /
+       |     \       /
+       |      \     /
+       |       \   /
+       |        \ /
+       |         g st = 3
+       h 
+      / \
+     /   \
+    i --- j 
+    \      \
+     \      \
+      \      \
+       k ---- l
+        \
+         \
+          \
+           m ---- n
+            \    /
+             \  / 
+               o
+
+
+d starting time is 1
+f = 2
+g = 3
+c = 4
+b = 5
+a = 6
+a ending time is 7
+a = 6/7
+We disconnect A and B, its not a bridge
+A will take its descedant vertexes, B is parent of A
+A will check all its descendant vertexes starting time and it will take the minimum starting time of its descendants except parent.
+A starting time is 6 and take 4 from C
+A - B edge is not a bridge
+E = 7
+E backtrack to B
+If B disconnects, E, before backtracking will check his descendants for minimum starting time
+E starting time is 7 and take 1 from D
+B backtrack to C but before backtracking we check his descedandsnts for minimum starting time
+B starting time is 5 and take 1 from E
+We go from C to H
+H = 8
+I = 9
+k = 10
+L = 11
+J = 12
+J backtrack to L
+L checks all descedant vertexes who is not its parent, 
+J starting time is 12 and take 8 from H
+L backtrack to K
+L check all descedants vertexes who is not its parent (K) and take the minimum starting time
+L starting time is 11 and take 8 from J
+M = 13
+N = 14
+O = 15
+We backtrack but before that we check the descedant vertexes for minimum starting time
+O starting time is 15 and take 13 from M
+N - 14/13
+
+We backtrack from M to K
+M becomes 13/13
+
+If K deletes the edge to M, the edge becomes a bridge
+Because M time is greater than the parent starting time 
+M is 13 K is 10, K doesn't know another edge that has a lower value
+
+K will backtrack but before it will take the minimum starting time from a descedant
+K becomes 10/8
+I backtracks
+I becomes 9/8
+H backtracks
+H becomes
+minimum starting time should less and equal 
+H becomes 8/8
+
+C can disconnect H because starting time is greater than parent node starting time
+H > C, 8 > 4
+
+C going to G
+C becomes 4/1 
+G = 3
+G becomes 3/1 
+G goes to F
+F becomes 2/1
+F goes D
+we reached to source
+
+(img 4 shows it all)
+Time Complexity O(v+e)

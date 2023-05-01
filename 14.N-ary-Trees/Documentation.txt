@@ -1,0 +1,2 @@
+https://www.interviewbit.com/blog/n-ary-tree/#:~:text=N%2Dary%20trees%20are%20tree,children%20nodes%20for%20each%20node.
+\https://www.geeksforgeeks.org/generic-treesn-array-trees/

@@ -3,9 +3,9 @@ using _2.Printer.Concrete;
 
 namespace _1.Main.StaticCalls._LeetCode_Easy
 {
-    public class EasyProblemsTestRunner 
+    public class EasyProblemsTestRunner
     {
-                private readonly TestsEasyQuestions _tests;
+        private readonly TestsEasyQuestions _tests;
 
         public EasyProblemsTestRunner()
         {

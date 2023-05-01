@@ -1,0 +1,127 @@
+   Tree edge:    member of DFS traversal
+   Forward edge: Ii (x,y) where y appears after x and there is a path from x to y
+   Back edge:    Ii (x, y) where y appears before x and there is a path from y to x
+   Cross edge:   Ii (x, y) where is there no path from y to x
+
+   Img 1 as the example
+   
+   We go from vertex a to vertex band we note the edge as discovery/starting time and ending time in this case is 1
+
+   a -> b starting time is 2
+   b -> c starting is 3
+   c -> e starting time is 4
+
+   - backtrack
+   e -> c, we increase the time
+      e finishing time is 5
+      time: 4/5
+
+   c -> d starting time is 6
+   d -/-> b
+      d finishing time is 7
+      time: 6/7
+
+   - backtrack
+   d -> c, we increase the time
+      c finishing time is 8
+      time: 4/8
+   
+   - backtrack
+   c -> b
+      b finishing time is 9
+      time: 3/9
+
+   a -> f starting time is 10
+   f -> g starting time is 11
+   g -> l starting time is 12
+   
+   -backtrack
+   l -> g
+      l finishing time is 13
+      time: 12/13
+
+   g -> h starting time is 14
+   h -> i starting time is 15
+   i -> j starting time is 16
+
+   - backtrack
+      j -> i
+      j finishing time is 17
+      16/17
+
+   i -> d we cannot, is already visited
+   - backtrack
+   i -> j
+      i finishing time is 18
+      time: 15/18
+
+   h -> k starting time is 19
+   k -> m starting time is 20
+
+   - backtrack
+      m -> k
+      m finishing time is 21
+      time: 20/21
+
+   -backtrack
+      k finishing time is 22
+      time: 19/22
+
+   -backtrack
+      h finishing time is 23
+      time: 14/23
+
+   -backtrack 
+      f finishing time is 24
+      time: 10/24
+
+   -backtrack 
+      a finsihing time is 25
+      time: 1/25
+
+   Tree edges
+      (a, b), (b, c), (c, e), (c, d), (a, f), (f, g), (g, h), (h, i), (h, k), (k, m), (h, l)
+
+   Back edge
+      (d, b) x = d, 
+             y = b, 
+
+         starting time of b is less than d 
+            => b appears before d, 
+               y appears before x 
+
+         but there is path from y to x (b -> c -> d)
+
+   Cross edge
+      (b, e) x = d,
+             y = e
+
+         starting time of e is less than d
+            => e appears before d
+               no path between y to x
+   
+   (h, f) x = h,
+            y = f
+      
+      y appears before x
+      there is a path between y and x (f -> g -> h)
+      back edge
+
+   Forward edge
+      (g, m) x = g,
+             y = m
+
+         g appears before m
+         x appears before y
+         g to m is not a tree edge
+
+   (m, i)
+
+      y appears before x
+      cross edge
+
+   (i, b)
+      cross edge
+
+   (m, h)
+      back edge

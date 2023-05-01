@@ -1,0 +1,28 @@
+
+https://www.youtube.com/watch?v=71SJL5lOOzY&list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU&index=86
+
+      x is the cost of MST G(v,e) 
+      y is the cost of MST G(v, e^2)
+         e^2 means: 
+            - if w(u, v) belongs to E then w^2(u,v) belongs to E^2
+      find relationship between x and y, w belongs to real numbers
+         where: x >= y
+                x <= y
+                x == y
+                none of these
+
+      MST A: A -5-> B -3-> C -2-> D 
+         x(cost) = 10
+      MST B: A -25-> B -9-> C -4-> D
+         x(cost) = 38
+
+      we pick x <= y
+
+      MST A: A -0.5-> B -0.3-> C -0.2-> D 
+         x(cost) = 1
+      MST B: A -0.25-> B -0.9-> C -0.4-> D
+         x(cost) = 0.38
+
+      we pick x >= y
+
+      Answer of the question is none of these, we cannot find a relation between x and y

@@ -1,0 +1,63 @@
+  It is a liniar ordering of its vertices such that for every directed edge u,v for vertex u to v, u comes before vertex v in the ordering
+         Graph should be DAG (Directed and Acyclic)
+         Every DAG will have atleast one topological ordering
+
+         How to find Topological Sort
+
+             2 ------ 3
+            /|       /
+           / |      /
+          /  |     /
+         1   |    /
+          \  |   /
+           \ |  /
+            \| /
+             4------ 5
+
+         Edge directions
+         1 -> 2
+         2 -> 4
+         2 -> 3
+         4 -> 3
+         4 -> 5
+
+         No cycles and directed
+
+         First step to find topological sorting is to find out the in-degree of each vertex 
+            in-degree means the number of edges coming to that vertex 
+            out-degree means the number of edges going out from that vertex
+
+         Steps:
+         1. We find in-degree of each vertex 
+         1 = in-degree edges is 0
+         2 = 1
+         4 = 2
+         5 = 1
+         3 = 2
+
+         2. Start writing topological/linear ordering from the vertex having in-degree 0
+         We choose vertex 1
+            - we delete this vertex and the edges out-going from this one
+            and we have to update the in-degree of the rest of the vertexes
+
+         2 = 0
+         4 = 1
+         5 = 1
+         3 = 2
+
+         We select again the vertex with in-degree 0
+         We delete vertex 2 and out-going edges
+
+         4 = 0
+         5 = 1
+         3 = 1
+
+         next iteration
+         5 = 0
+         3 = 0
+
+         result: 1 2 4 3 5
+         result: 1 2 4 5 3
+
+         If a graph contains a cycle we cannot find a topological order because there is no in-degree 0 vertex
+         

@@ -1,0 +1,36 @@
+  If all nodes are connected, we have 1 connected component
+   Every component is connected by paths 
+   Graphs are not connected in super graph
+   node with no edge is considered a component 
+
+   We use DFS or BFS how to find out connected components
+
+   ConnectedComponents(G graph)
+   {
+      foreach vertex in v belongs to N
+         flag[v] = -1 // We fill vertexes with -1 
+
+      count = 0;
+      for (var v = 0; v < N; v++) { // we increase v once we get out of the DFS
+         if (flag[v] = -1) // We enter here in DFS if flag[v] = -1
+         {
+            DFS(v, flag);
+            count++; // we count the connected components
+         }
+      }
+      cout << count
+   }
+
+   DFS(int v, int flag)
+      flag[v] = 1, cout << v // we turn the flag to 1 as visited
+      foreach(adjancent node u in v) {
+         if(flag[u] == -1) // If is -1 we call DFS again so we visit all adjancent vertexes
+            DFS(u, flag) 
+      }
+
+      // we return call stack when u != -1
+
+      0 1 2 3
+      4 5
+      6 7 8 9
+      3 components

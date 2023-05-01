@@ -2,7 +2,7 @@ namespace _LeetCode_Medium.Concrete.Struggle
 {
     public class NumberOfWaysToBuyPensAndPencils
     {
-         public static long WaysToBuyPensPencils(int total, int cost1, int cost2)
+         public long WaysToBuyPensPencils(int total, int cost1, int cost2)
         {
             if (cost1 + cost2 > total) return 1;
 

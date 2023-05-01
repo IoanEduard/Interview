@@ -1,0 +1,48 @@
+     We can use: 
+         - DFS, 
+         - BFS, 
+         - Topological Sort, 
+         - Disjoint Set
+
+      A ---------- B ----- D
+       \            \     /
+        \            \   /
+         C            \ /
+                       E
+
+         For BFS we use Queue, we explore all edges of a vertex then we move forward
+         We set a flag -1 unvisited, 
+                        0, vertex is in queue, 
+                        1 is visited
+
+         Enqueue: A
+         A = 0
+         Dequeue: A
+         Print A
+         A = 1
+         Enqueue: B, C, != A, is visited
+         B = 0
+         C = 0
+         Dequeue: B
+         Print B
+         B = 1
+         Enqueue: E, D
+         E = 0
+         D = 0
+         Dequeue: C
+         Print C
+         C = 1
+         Enqueue: != A, is visited
+         Dequeue: E
+         Print E
+         E = 1
+         End
+
+         Flag of B is 1, means is visited
+         Flag of D is 0, means is in stack
+         We reached a cycle
+
+         If any vertex  finds its adjanent vertex with flag 0, then the graph it contains a cycle
+
+         if(f[v] == 0) return 1
+         if(f[v] == -1) enqueue(f[v])

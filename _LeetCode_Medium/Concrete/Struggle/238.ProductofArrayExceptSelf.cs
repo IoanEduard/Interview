@@ -16,7 +16,7 @@ namespace _LeetCode_Medium.Concrete.Struggle
 
         // Solution nr 1
         // This solution is O(1) space because temp is not considered extra space
-        public static int[] ProductExceptSelf(int[] nums)
+        public int[] ProductExceptSelf(int[] nums)
         {
             var temp = new int[nums.Length];
 
@@ -41,7 +41,7 @@ namespace _LeetCode_Medium.Concrete.Struggle
         // O(n) space using two arrays
         // So we do product from left to right and right to left of all elements except nums[i] 
         // then we do the product between elements and we get the final result.
-        public static int[] ProductExceptSelf2(int[] nums)
+        public int[] ProductExceptSelf2(int[] nums)
         {
             var n = nums.Length;
 
@@ -76,7 +76,7 @@ namespace _LeetCode_Medium.Concrete.Struggle
         // https://leetcode.com/problems/product-of-array-except-self/solutions/1342916/3-minute-read-mimicking-an-interview/
 
         // Solution 3 Brute Force Approach: if i != j we skip the current element
-        public static int[] ProductExceptSelfBruteForce(int[] nums)
+        public int[] ProductExceptSelfBruteForce(int[] nums)
         {
             var n = nums.Length;
             var result = new int[n];

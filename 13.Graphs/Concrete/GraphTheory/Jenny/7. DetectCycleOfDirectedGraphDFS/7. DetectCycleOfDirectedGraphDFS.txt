@@ -1,0 +1,49 @@
+ Detect cycle in directed graph using DFS
+
+          B ------D
+         /|\      |
+        / | \     |
+       /  |  \    |
+      A   |   \   |
+       \  |    \  |
+        \ |     \ |
+         \|      \|
+          C       E
+
+      Is a directed graph:
+         A -> B 
+         A -> C
+         B -> C
+         B -> D
+         D -> E
+         E -> B
+
+      Flag is initialize with -1 on each vertex
+                                                                           Parent Map    
+      We use a stack                       Visited Set                    Vertex | Parent                       Flag (-1 = unvisited, 0 = in stack, 1 = popped)
+             A                                A                             A        -                          A = 0
+             B                                B                             B        A                          B = 0
+             C                                C                             C        B                          C = 0
+         Pop C                                                                                                  C = 1
+             D                                D                             D        B                          D = 0
+             E                                E                             E        D                          E = 0
+             B = 0,
+         (graph contains a cycle)
+            return true
+
+         E -> B 
+         When we go from E to B, we find out flag of B is 0 and the E is already in the stack
+         We check parent of E is D, then we check parent of D which is B
+         B --> D --> E -> B
+
+
+         IF we don't have an edge between E and B
+         Pop E                                                                                                    E = 1
+         Pop D                                                                                                    D = 1
+         Pop B                                                                                                    B = 1
+         Pop A                                                                                                    A = 1
+         if stack is empty then no cycle was found
+
+         Definition: 
+         DFS needs one condition, if any vertex finds its adjacent vertex with flag 0 it means that graph has a cycle
+         Time complexity is O(V+E) best case

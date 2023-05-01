@@ -2,7 +2,7 @@ namespace _LeetCode_Medium.Concrete.Struggle
 {
     public class MaximumPointsYouCanObtainFromCards
     {
-        public static int MaxScore(int[] cardPoints, int k)
+        public int MaxScore(int[] cardPoints, int k)
         {
             var currentSum = 0;
             var maxScore = int.MinValue;
@@ -27,7 +27,7 @@ namespace _LeetCode_Medium.Concrete.Struggle
         }
 
         // Leetcode solution
-        public static int MaxScore1(int[] cardPoints, int k)
+        public int MaxScore1(int[] cardPoints, int k)
         {
             var n = cardPoints.Length;
             var res = 0;

@@ -2,6 +2,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\_ExtensionMethods\_ExtensionMethods.csproj" />
+    <ProjectReference Include="..\14.Trees\14.Trees.csproj" />
+    <ProjectReference Include="..\14.N-ary-Trees\14.N-ary-Trees.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

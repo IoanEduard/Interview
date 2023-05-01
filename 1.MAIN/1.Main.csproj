@@ -11,6 +11,7 @@
     <ProjectReference Include="..\15.DynamicProgramming\15.DynamicProgramming.csproj" />
     <ProjectReference Include="..\7.LinkedLists\7.LinkedLists.csproj" />
     <ProjectReference Include="..\6.Recursion\6.Recursion.csproj" />
+    <ProjectReference Include="..\_TOP50\_TOP50.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

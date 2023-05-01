@@ -1,0 +1,53 @@
+0 -----  1
+|      / |\
+|     /  | \
+|    /   |  \
+|   /    |   \
+|  /     |    5
+| /      |   / 
+|/       |\ /                 
+3 -------2 \                
+ \       /  \               
+  \     /    \              
+   \   /      \
+     4 ------- 6      
+
+    We can use any node as root node. e.g: node 2
+    We use Queue for the data structure: FIFO
+
+    queue     = 0
+    dequeue   = ⁡⁢⁣⁢0⁡
+    enqueue   = ⁡⁢⁢⁢1, 3⁡
+    result   -> 0
+
+    queue     = ⁡⁢⁣⁢0⁡, ⁡⁣⁣⁢1⁡, 3
+    dequeue   = ⁡⁢⁣⁢1⁡
+    enqueue   = ⁡⁢⁢⁢2, 5, 6⁡ (3 already inserted, we don't insert twice)
+    result   -> 0, 1
+
+    queue     = ⁡⁢⁣⁢0⁡, ⁡⁢⁣⁢1⁡, ⁡⁢⁣⁡⁢⁣⁢3⁡⁡, ⁡⁣⁣⁢2⁡, 5, 6
+    dequeue   = ⁡⁢⁣⁢3⁡⁡
+    enqueue   = ⁡⁡⁢⁢⁢4⁡ (2 already inserted)
+    result   -> 0, 1, 3
+
+    queue     = ⁡⁢⁣⁢0⁡, ⁡⁢⁣⁢1⁡, ⁡⁢⁣⁢3⁡, ⁡⁢⁣⁢2⁡, ⁡⁣⁣⁢5⁡, 6, 4
+    dequeue   = ⁡⁢⁣⁢𝟮⁡⁡
+    enqueue   = ⁡⁢nothing
+    result   -> 0, 1, 3, 2
+
+    queue     = ⁡⁢⁣⁢0⁡, ⁡⁢⁣⁢1⁡, ⁡⁢⁣⁢3⁡, ⁡⁢⁣⁢2⁡, ⁡⁣⁣⁢5⁡, 6, 4
+    dequeue   = ⁡⁢⁣⁢5⁡⁡
+    enqueue   = ⁡⁢nothing
+    result   -> 0, 1, 3, 2, 5
+
+    queue     = ⁡⁢⁣⁢0⁡, ⁡⁢⁣⁢1⁡, ⁡⁢⁣⁢3⁡, ⁡⁢⁣⁢2⁡, ⁡⁣⁣⁡⁢⁣⁢5⁡⁡, ⁡⁣⁣⁢6⁡⁡, 4
+    dequeue   = ⁡⁢⁣⁢6⁡⁡
+    enqueue   = ⁡⁢nothing
+    result   -> 0, 1, 3, 2, 5, 6
+    
+    queue     = ⁡⁢⁣⁢0⁡, ⁡⁢⁣⁢1⁡, ⁡⁢⁣⁢3⁡, ⁡⁢⁣⁢2⁡, ⁡⁣⁣⁡⁢⁣⁢5⁡⁡, ⁡⁣⁣⁡⁢⁣⁢6⁡⁡⁡, ⁡⁣⁣⁢4⁡
+    dequeue   = ⁡⁢⁣4⁡⁡
+    enqueue   = ⁡⁢nothing
+    result   -> 0, 1, 3, 2, 5, 6, 4
+
+    We explore nodes, we don't insert already visited nodes

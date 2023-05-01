@@ -1,10 +1,18 @@
 ﻿
+using System.Text;
+using _1.Main.StaticCalls;
 using _1.Main.StaticCalls._LeetCode_Easy;
+using _1.Main.StaticCalls._LeetCode_Hard;
+using _1.Main.StaticCalls._LeetCode_Medium;
+using _1.Main.StaticCalls.LinkedLists;
 using _1.Main.StaticCalls.SlidingWindow;
 using _1.Main.StaticCalls.SortingAlgorithms;
 using _1.Main.StaticCalls.Trees;
+using _14.Trees.Concrete;
 using _15.DynamicProgramming.FreeCodeCamp.Concrete.Documentation;
 using _6.Recursion.Concrete.freeCodeCamp;
+using _7.LinkedLists.Concrete;
+using _TOP50.Trees;
 
 // var dailyWork = new DailyWorkFileTestRunner();
 
@@ -39,6 +47,17 @@ var struggle = new StruggleProblemsTestRunner();
 // struggle.RunTests_Strings();
 // struggle.RunTests_PrefixSum();
 
+var struggleMedium = new MediumProblemsTestRunner();
+// struggleMedium.RunTests();
+
+var hard = new HardProblemsTestRunner();
+// hard.RunTests();
+
+var dailyWork = new _DailyWorkTestRunner();
+dailyWork.RunTests();
+
+var linkedLists = new LinkedListsTestRunner();
+// linkedLists.RunTests();
 
 // Todo: remove static usings and do inheritance with protected
 // Keep doing interfaces for all tests just like Sliding Window and inject them
@@ -64,7 +83,6 @@ var struggle = new StruggleProblemsTestRunner();
 // System.Console.WriteLine(easy.IsAnagram("anagram", "nagaram"));
 // System.Console.WriteLine(easy.IsAnagram("aacc", "ccac"));
 // System.Console.WriteLine(easy.AlternateDigitSum(886996));
-
 
 var dp = new FreecodeCampDP();
 // System.Console.WriteLine(dp.FibRecursive(48));
@@ -166,5 +184,139 @@ var dp = new FreecodeCampDP();
 
 // Recursion
 var rec = new FreeCodeCampRecursion();
-System.Console.WriteLine(rec.ReverseString("avion"));
-System.Console.WriteLine(rec.IsPalindrome("racecar"));
+// // System.Console.WriteLine(rec.ReverseString("avion"));
+// // System.Console.WriteLine(rec.IsPalindrome("racecar"));
+// // System.Console.WriteLine(rec.DecimalToBinary(233, new StringBuilder()));
+// var arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15 };
+// System.Console.WriteLine(rec.BinarySearch(arr, 10, 0, arr.Length - 1));
+
+// var merge = new int[] { 1, 6, 7, 2, 8, 1, 3, 2 };
+// var res = rec.MergeSort(merge, 0, merge.Length - 1);
+// foreach(var item in res) {
+//     System.Console.Write($"{item} ");
+// }
+
+// var node = new ListNode(1);
+// var node1 = new ListNode(2);
+// var node2 = new ListNode(3);
+// var node3 = new ListNode(4);
+// var node4 = new ListNode(5);
+
+// node.next = node1;
+// node1.next = node2;
+// node2.next = node3;
+// node3.next = node4;
+
+// var node0 = new ListNode(1);
+// var node11 = new ListNode(2);
+// var node22 = new ListNode(3);
+// var node33 = new ListNode(4);
+// var node44 = new ListNode(5);
+
+// node0.next = node11;
+// node11.next = node22;
+// node22.next = node33;
+// node33.next = node44;
+
+// var mergeLists = rec.SortedMerge(node, node0);
+
+// var nodeReversed = rec.ReverseList(node);
+
+// System.Console.WriteLine(mergeLists.val);
+// System.Console.WriteLine(mergeLists.next.val);
+// System.Console.WriteLine(mergeLists.next.next.val);
+// System.Console.WriteLine(mergeLists.next.next.next.val);
+// System.Console.WriteLine(mergeLists.next.next.next.next.val);
+// System.Console.WriteLine(mergeLists.next.next.next.next.next.val);
+// System.Console.WriteLine(mergeLists.next.next.next.next.next.next.val);
+// System.Console.WriteLine(mergeLists.next.next.next.next.next.next.next.val);
+// System.Console.WriteLine(mergeLists.next.next.next.next.next.next.next.next.val);
+// System.Console.WriteLine(mergeLists.next.next.next.next.next.next.next.next.next.val);
+
+Top50Trees top = new Top50Trees();
+
+// TreeNode tree = new TreeNode();
+// tree = new TreeNode(1);
+// tree.left = new TreeNode(2);
+// tree.right = new TreeNode(3);
+// tree.left.left = new TreeNode(4);
+// tree.left.right = new TreeNode(5);
+
+// Console.WriteLine("Height of tree is "
+//                     + top.MaximumDepthOrHeightOfATreeIterative3(tree));
+
+
+// TreeNode tree = new TreeNode();
+// TreeNode tree2 = new TreeNode();
+
+// tree = new TreeNode(1);
+// tree.left = new TreeNode(2);
+// tree.right = new TreeNode(3);
+// tree.left.left = new TreeNode(4);
+// tree.left.right = new TreeNode(5);
+
+// tree2 = new TreeNode(1);
+// tree2.left = new TreeNode(2);
+// tree2.right = new TreeNode(3);
+// tree2.left.left = new TreeNode(4);
+// tree2.left.right = new TreeNode(5);
+
+// // Function call
+// if (top.IndenticalTreesLevelOrderTraversal(tree, tree2))
+// {
+//     Console.WriteLine("Both trees are identical");
+// }
+// else
+// {
+//     Console.WriteLine("Trees are not identical");
+// }
+
+/* creating a binary tree and
+entering the nodes */
+// TreeNode tree = new TreeNode();
+// tree = new TreeNode(1);
+// tree.left = new TreeNode(2);
+// tree.right = new TreeNode(3);
+// tree.left.left = new TreeNode(4);
+// tree.left.right = new TreeNode(5);
+
+// /* print inorder traversal of the input tree */
+// Console.WriteLine("Inorder traversal "
+//                   + "of the constructed tree is");
+// top.InOrder(tree);
+// Console.WriteLine("");
+
+// /* convert tree to its mirror */
+// top.MirrorTreeIterative(tree);
+
+// /* print inorder traversal of the minor tree */
+// Console.WriteLine("Inorder traversal "
+//                   + "of the mirror tree is");
+// top.InOrder(tree);
+
+// TreeNode tree = new TreeNode();
+// tree = new TreeNode(1);
+
+// tree.left = new TreeNode(2);
+// tree.right = new TreeNode(2);
+
+// tree.left.left = new TreeNode(3);
+// tree.left.right = new TreeNode(4);
+// tree.right.left = new TreeNode(4);
+// tree.right.right = new TreeNode(3);
+
+// tree.left.left.left = new TreeNode(5);
+// tree.left.left.right = new TreeNode(6);
+// tree.left.right.left = new TreeNode(7);
+// tree.left.right.right = new TreeNode(8);
+
+// tree.right.left.left = new TreeNode(8);
+// tree.right.left.right = new TreeNode(7);
+// tree.right.right.left = new TreeNode(6);
+// tree.right.right.right = new TreeNode(5);
+
+// Boolean output = top.SymetricTreeIterative(tree);
+// if (output == true)
+//     Console.WriteLine("Symmetric");
+// else
+//     Console.WriteLine("Not symmetric");

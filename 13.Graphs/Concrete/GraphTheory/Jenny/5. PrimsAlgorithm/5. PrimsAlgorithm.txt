@@ -1,0 +1,19 @@
+    Prim's algorithm - How to find min ST
+      Remove all the loops (edge coming back to same vertex)
+      Remove pararell edges
+         - keep the edge with minimum weight
+      Choose any vertex as root node
+      Choose (A) node
+         we check all the outgoing/incident edges and choose the edge with minimum weight
+      A -> B (weight 7)
+      B -> C, w = 3
+      C -> E, w = 3
+      E -> F, w = 2
+      E -> D, w = 2
+
+      G(v,e)
+      G'(v',e')
+         v'= v
+         e'= subset of e
+         e'=|v|-1
+            6-1

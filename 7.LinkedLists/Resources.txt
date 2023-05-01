@@ -4,3 +4,7 @@ https://medium.com/outco/reversing-a-linked-list-easy-as-1-2-3-560fbffe2088
 https://www.geeksforgeeks.org/reverse-a-linked-list/
 https://www.simplilearn.com/tutorials/data-structure-tutorial/linked-list-in-data-structure
 https://www.youtube.com/watch?v=oBt53YbR9Kk
+
+
+Articles I did read:
+💪 https://medium.com/@kojinoshiba/data-structures-in-python-series-1-linked-lists-d9f848537b4d

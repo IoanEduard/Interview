@@ -12,7 +12,7 @@ namespace _LeetCode_Medium.Concrete.Struggle
 			ReverseArray(nums, 0, nums.Length - 1);
 		}
 
-		private static void ReverseArray(int[] nums, int left, int right)
+		private void ReverseArray(int[] nums, int left, int right)
 		{
 			while (left < right)
 			{
@@ -26,7 +26,7 @@ namespace _LeetCode_Medium.Concrete.Struggle
 
 		// Why did it I struggle with this?
 		// Here is my failed attempt.
-		public static int[] RotateFail(int[] nums, int k)
+		public int[] RotateFail(int[] nums, int k)
 		{
 			var startRotationPointer = nums.Length < k ? k % nums.Length : nums.Length - k;
 
