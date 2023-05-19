@@ -1,0 +1,42 @@
+Floyd Warshall
+ 
+ ----
+|    |
+1 -- 2
+|   /|
+|  / |
+| /  |
+|/   |
+3 -- 4
+
+1 -> 2 w = 9
+1 -> 3 w = -4
+2 -> 1 w = 6
+3 -> 2 w = 5
+4 -> 3 w = 1
+
+We have to find "All Pair Shortest Path"
+For example we take vertex 1 as a source vertex and we find shortest distance to each vertex
+ 
+1 -> 2
+  -> 3
+  -> 4
+
+2 -> 1
+  -> 3
+  -> 4
+
+3 -> 1
+  -> 2
+  -> 3
+
+4 -> 1
+  -> 2
+  -> 3
+
+  All Pairs shortest path problem
+  Dijsktra algorithm would find shortest path from a given source 
+  Using Dijsktra algorithm for this case we would have to apply it 4 times to find All pair shortest path
+
+  Floyd Warshall is using DP technique, breaking down a big problem into smaller problems
+    - works on positive and negative weights 

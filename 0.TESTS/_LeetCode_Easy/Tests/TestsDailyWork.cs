@@ -105,7 +105,19 @@ namespace _0.Tests._LeetCode_Easy.Tests
 
         public void LastStoneWeight_Test()
         {
-            _display.DisplayInteger.DisplayResult(_dailyWork.LastStoneWeight(new int[] { 2,7,4,1,8,1 }));
+            _display.DisplayInteger.DisplayResult(_dailyWork.LastStoneWeight(new int[] { 2, 7, 4, 1, 8, 1 }));
+        }
+
+        public void FindDifference_Test()
+        {
+            var result = _dailyWork.FindDifference(new int[] { 1, 2, 3 }, new int[] { 2, 4, 6 });
+
+            foreach (var item in result)
+            {
+                _display.DisplayInteger.DisplayResult(item);
+            }
+
+
         }
     }
 }

@@ -72,6 +72,7 @@ TO DO:
         https://www.geeksforgeeks.org/indexed-priority-queue-with-implementation/
     7.2 Topological Sort
         https://medium.com/@stephanie.jinzi.yan/topological-sorting-60f58d88e805
+        https://en.wikipedia.org/wiki/Topological_sorting
 
     file:///C:/Users/Eduard/Downloads/graph_theory_algorithms.pdf
     https://www.youtube.com/watch?v=dS44jZyj5gU
@@ -80,6 +81,25 @@ TO DO:
     https://www.geeksforgeeks.org/depth-first-traversal-dfs-on-a-2d-array/
     https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
     https://www.udemy.com/course/amazing-graph-algorithms-coding-in-javajavascript-python/
+
+    https://en.wikipedia.org/wiki/Bor%C5%AFvka%27s_algorithm
+    https://stackoverflow.com/questions/1195872/when-should-i-use-kruskal-as-opposed-to-prim-and-vice-versa
+    https://stackoverflow.com/questions/13826846/when-to-use-kruskals-algorithm-vs-prims
+    https://www.geeksforgeeks.org/difference-between-prims-and-kruskals-algorithm-for-mst/
+    https://www.baeldung.com/cs/kruskals-vs-prims-algorithm
+    https://www.javatpoint.com/kruskal-algorithm
+    https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
+    https://www.scaler.com/topics/prims-and-kruskal-algorithm/
+    https://www.programiz.com/dsa/kruskal-algorithm
+
+
+
+    https://www.baeldung.com/cs/graphs-sparse-vs-dense
+    https://www.javatpoint.com/graph-algorithms
+    https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
+    https://www.freecodecamp.org/news/graph-algorithms-and-data-structures-explained-with-java-and-c-examples/
+    https://www.simplilearn.com/tutorials/data-structure-tutorial/graphs-in-data-structure
+    https://www.codecademy.com/learn/complex-data-structures/modules/cspath-graphs/cheatsheet
 
 8. Jenny videos - Data Structures
     https://www.youtube.com/@JennyslecturesCSIT
@@ -125,7 +145,7 @@ https://www.youtube.com/watch?v=343EWZS9O88
 others
 https://medium.com/@stephanie.jinzi.yan/introduction-of-alipay-and-wechatpay-95f3a66da046
 https://dev.to/alisabaj/solving-the-best-time-to-buy-and-sell-stocks-problem-in-one-pass-42in
-
+https://medium.com/@florian_algo/understanding-the-basics-of-dynamic-programming-in-10-minutes-1f5d76418ce5
 
 Problems I skipped:
     https://leetcode.com/problems/number-of-closed-islands/
@@ -231,4 +251,21 @@ https://www.youtube.com/watch?v=SL357TC6zpY
 https://medium.com/@shahidmanzoorbhat/levenshtein-distance-in-c-bb6781bae944
 
 
+Problems I skipped and I am ashamed, will get back to them as soon as possible
+https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/description/
+https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/description/
+https://leetcode.com/problems/dota2-senate/description/
+https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/description/
+https://leetcode.com/problems/spiral-matrix-ii/
+https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/description/
+https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/
+https://leetcode.com/problems/swap-nodes-in-pairs/
 
+
+javascript
+https://www.geeksforgeeks.org/8-best-javascript-game-engines/
+https://www.youtube.com/watch?v=oZInrjsClPg
+// https://www.educative.io/answers/function-composition-in-javascript
+// https://javascript.info/async
+// https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control

@@ -1,0 +1,78 @@
+Single source shortest path
+
+Is different from Dijstra might or not work with negative weights
+Bellman-Ford is slower but ensures the result is correct
+
+    B -- E     
+   /|   /|      
+  / |  / |       
+ /  | /  F     
+A---C   /
+\   |  / 
+ \  | /  
+  \ |/   
+    D 
+
+Weights and directions:
+    A -> B =  6
+    A -> C =  4
+    A -> D =  5
+    C -> B = -2
+    D -> C = -2
+    C -> E =  3
+    D -> F = -1
+    E -> F =  3
+
+We relaxing all edges n-1 times, n is number of vertexes
+
+Relaxing means:
+if(d[u] + c(u,v) < d[v])
+    d[v] = d[u] + c(u,v)
+
+Source is 0, others are inifinity 
+
+All edges
+
+                    (A,B), (A,C), (A,D), (B,E), (C,E), (D,C), (D,F), (E,F), (C,B)
+Iteration 1            1      4      5      5      -      3      4      -      1  
+Iteration 2            1      4      5      0      -      3      4      3      1  // No more changes from here 
+Iteration 3            1      4      5      0      -      3      4      3      1  
+Iteration 4            1      4      5      0      -      3      4      3      1  
+Iteration 5            1      4      5      0      -      3      4      3      1  
+
+A - 0
+B - 1
+C - 3
+D - 5
+E - 0
+F - 3
+
+5 Iterations because there are 6 vertexes
+
+Time Complexity
+O(E(|v|-1))
+O(E*V) 
+O(n^2)
+
+v(v-1)   
+------   
+   2     
+
+  ( n(n-1)         )
+O ( ------ * n-1   )
+  (    2           )
+
+Drawback of this algorithm
+Will not work if graph contains a negative weight cycle
+If it contains any cycle if edge sum is negative
+
+                (1,3)   (1,2)   (3,2)   (2,4)   (4,3)
+
+Iteration 1        5       4       -      11      -4   
+Iteration 2        5       4       3      10      -5
+Iteration 3        5       4       2       9      -6
+
+In the 4th iteration should be no changes in the vertexes distance becaause when we reach n-1 is over, otherwise it gives no correct answer
+    or this graph contains a negative cycle.
+
+Algorithm works only with negative edges, not with negative cycles

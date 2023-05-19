@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Text;
 using _14.N_ary___Trees.Concrete;
 using _14.Trees.Concrete;
@@ -1055,6 +1056,121 @@ namespace _LeetCode_Easy.Concrete
 
             return sum - max - min;
 
+        }
+
+        public IList<IList<int>> FindDifference(int[] nums1, int[] nums2)
+        {
+            var hash1 = new HashSet<int>();
+            var hash2 = new HashSet<int>();
+
+            for (var i = 0; i < nums1.Length; i++)
+            {
+                hash1.Add(nums1[i]);
+                hash2.Add(nums2[i]);
+            }
+
+            var list1 = new List<int>();
+            var list2 = new List<int>();
+
+            for (var i = 0; i < nums2.Length; i++)
+            {
+                if (!hash1.Contains(nums2[i]))
+                {
+                    list2.Add(nums2[i]);
+                }
+
+                if (!hash2.Contains(nums1[i]))
+                {
+                    list1.Add(nums1[i]);
+                }
+            }
+
+            return new List<IList<int>>() { list1.ToArray(), list2.ToArray() };
+        }
+
+        public IList<IList<int>> FindDifference2(int[] A, int[] B) =>
+            new[] {
+                A.Except(B).ToArray(),
+                B.Except(A).ToArray(),
+            };
+
+        public int NumSubseq(int[] nums, int target)
+        {
+            var mod = 1_000_000_007;
+            var n = nums.Length;
+            Array.Sort(nums);
+
+            var powers = new int[n];
+            powers[0] = 1;
+            for (var i = 1; i < n; ++i)
+            {
+                powers[i] = (powers[i - 1] * 2) % mod;
+            }
+
+            long count = 0;
+
+            for (var left = 0; left < n; left++)
+            {
+                var difference = target - nums[left];
+                var right = BinarySearch(nums, difference) - 1;
+
+                if (right >= left)
+                {
+                    count += powers[right - left];
+                    count %= mod;
+                }
+            }
+
+            return (int)count;
+        }
+
+        private int BinarySearch(int[] nums, int target)
+        {
+            var left = 0;
+            var right = nums.Length - 1;
+
+            while (left <= right)
+            {
+                var mid = left + (right - left) / 2;
+
+                if (nums[mid] <= target)
+                    left = mid + 1;
+                else
+                    right = mid - 1;
+            }
+            return left;
+        }
+
+        public int NumSubseqTwoPointer(int[] nums, int target)
+        {
+            var mod = 1_000_000_007;
+            var n = nums.Length;
+            Array.Sort(nums);
+
+            var powers = new int[n];
+            powers[0] = 1;
+            for (var i = 1; i < n; ++i)
+            {
+                powers[i] = (powers[i - 1] * 2) % mod;
+            }
+
+            int count = 0;
+            var left = 0;
+            var right = n - 1;
+
+            while (left <= right)
+            {
+                if (nums[left] + nums[right] <= target)
+                {
+                    count += powers[right - left];
+                    count %= mod;
+                    left++;
+                }
+                else
+                    right--;
+            }
+
+            return count;
         }
     }
 }

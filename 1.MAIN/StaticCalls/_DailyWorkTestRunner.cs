@@ -23,7 +23,8 @@ namespace _1.Main.StaticCalls
             // _tests.DecodeString_Test();
             // _tests.BackspaceCompare_Test();
             // _tests.TopKFrequent_Test();
-            _tests.LastStoneWeight_Test();
+            // _tests.LastStoneWeight_Test();
+            _tests.FindDifference_Test();
         }
     }
 }

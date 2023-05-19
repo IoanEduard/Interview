@@ -1,0 +1,140 @@
+
+Undirected Graph
+
+        8        7
+     1 -- 2 -------- 3 
+    /|    | \        |\
+  4/ |  2 |  \       | \ 9
+  /  |    |   \      |  \
+ / 11|    |    \  14 |   \
+0    |    8     \    |    7
+ \   |  7/|    4 \   |   /
+  \  |  / |       \  |  / 10
+  8\ | /  | 6      \ | /
+    \|/ 1 |    2    \|/
+     4 -- 5 -------- 6
+
+Dijkstra Algorithms finds the single source shortest path travel SSD
+
+Source: 0 vertex
+
+First Step: 
+    Distance in the beginning is infinity for each vertex
+
+    u, v
+ if d(u) + c(u,v)  <   d(v)
+    0    + 4            infinity       
+
+    We go from 0 to 1 and we apply the formula 0 + 4 < infinity, yes: we update the vertex 1 distance 
+
+    distance from 0 to 0 is 0
+    distance from 0 to 1 is 4   
+
+    This results in formula:
+    if(d(u) + c(u,v) < d(v)) {
+        d(v) = d(u) + c(u,v)
+    }
+
+    distance from 0 to 4 is 8
+    0 now is visited vertex
+    we now select the shortest distance, all others are infinity so we pick 1
+    1 now is selected vertex
+    we cannot select 0 because is already visited
+
+    distance from 1 to 2 is 12
+    4 + 8 < infinity
+
+    distance from 1 to 4
+    4 + 11 < 8 - false, we do not update vertex 4
+
+    we select vertex 4, which has the distance of 8
+
+    distance from 4 to 5 is 9
+    4 to 8 is 15
+
+    we pick the shortest distance which is 9
+    distance from 5 to 6 is 11
+    distance from 5 to 8 is 15, no need to change
+    
+    we select vertex 6 which has the distance of 11
+
+    distance from 6 to 7 is 21
+    distance from 6 to 3 is 25
+    distance from 6 to 2 is 15 but vertex 2 has already distance of 12, we don't update
+    
+    we select vertex 2 which has distance of 12
+
+    distance from 2 to 8, we update 8 with 14
+    distance from 2 to 3, we update 3 with 19
+
+    we pick vertex 8 which has minimum distance of 14
+    nodes connected are all connected, we cannot update
+
+    we pick vertex 3
+    19+9 is greater than 21, we do not update
+
+    Now we have the shortest distance from source to any vertex in the graph 
+
+Directed Graph 
+ 
+
+        B ------ D
+       / |      /|
+      /  |     / |
+     /   |    /  |
+    A    |   /   |
+    | \  |  /    |
+    |  \ | /     |
+    |   \|/      |
+    |    C ------ E
+    |-----------/         
+
+    A -> B = 10
+    A -> C =  5
+    E -> A =  2
+    C -> B =  3
+    B -> D =  1
+    C -> D =  9
+    E -> D =  6
+
+    Source: A
+  
+    Formula
+    if (d(u) + c(u,v) < d(v)) {
+        d(v) = d(u) + c(u,v)
+    }
+
+
+    A   B   C   D   E
+A   0  inf inf inf inf 
+C      10   5  inf inf => C is selected because 5 is less than infinity
+E       8   -   14  7  => E is selected because 7 is the minimum
+B       8       13     => B is selected because 8 is the minimum
+D                9     => D is selected 
+
+If we are asked
+
+SSD A to B -> 8
+SSD A to C -> 5
+SSD A to E -> 7
+SSD A to D -> 9
+
+Path: A to D 
+We take D 
+We go one step backward and we check which value was selected
+B is was selected
+we go one step backward
+C was selected
+A was selected
+
+A -> C -> B -> D = 9
+
+Path: A to B = 8
+We select the row B and we have the value 8
+we go one step backward and value hasn't changed is still 8, we don't select which one was selected
+We go one row up and see B has been changed and we pick the value selected which is C = 5
+We go one step backward and see value has been changed so we select the selected value which is A = 0
+
+B -> C -> A = 8
+
+Drawback of Dijkstra algorithm is that it might not work if edges have negative values
