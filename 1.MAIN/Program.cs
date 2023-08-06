@@ -4,6 +4,7 @@ using _1.Main.StaticCalls;
 using _1.Main.StaticCalls._LeetCode_Easy;
 using _1.Main.StaticCalls._LeetCode_Hard;
 using _1.Main.StaticCalls._LeetCode_Medium;
+using _1.Main.StaticCalls.BinarySearch;
 using _1.Main.StaticCalls.LinkedLists;
 using _1.Main.StaticCalls.SlidingWindow;
 using _1.Main.StaticCalls.SortingAlgorithms;
@@ -20,7 +21,7 @@ var binaryTreeTets = new BinaryTreesTestRunner();
 // binaryTreeTets.RunBinaryTreesTests();
 
 var slidingWindowTests = new SlidingWindowTestsRunner();
-// slidingWindowTests.RunSlidingWindowTests();
+// slidingWindowTests.RunTests();
 
 var quickSortTests = new QuickSortTestsRunner();
 // quickSortTests.RunQuickSortTests();
@@ -40,6 +41,9 @@ var toImprove = new ProblemsToImproveTestRunner();
 // Algorithms are easy straight forward, no testcases documented.
 var easy = new EasyProblemsTestRunner();
 
+var binarySearch = new BinarySearchTestRunner();
+binarySearch.RunTests();
+
 // Untested
 var struggle = new StruggleProblemsTestRunner();
 // struggle.RunTests_Arrays();
@@ -54,7 +58,7 @@ var hard = new HardProblemsTestRunner();
 // hard.RunTests();
 
 var dailyWork = new _DailyWorkTestRunner();
-dailyWork.RunTests();
+// dailyWork.RunTests();
 
 var linkedLists = new LinkedListsTestRunner();
 // linkedLists.RunTests();

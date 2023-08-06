@@ -1,0 +1,10 @@
+Computed values
+
+Calling methods in string interpolation will call all methods again and again
+
+
+Summary:
+DOM & Templates
+Data & event bindings
+Reactivity
+Styling

@@ -15,20 +15,28 @@ namespace _1.Main.StaticCalls.SlidingWindow
 
         public void RunTests()
         {
-            _tests.CountGoodSubstrings_v1_Test();
-            _tests.CountGoodSubstrings_v2_Test();
-            _tests.PairThatContainsMinimumElementInArray_Test();
-            _tests.MaximumSumOfConsecutiveNumbersBruteForce_Test_1();
-            _tests.MaximumSumOfConsecutiveNumbersBruteForce_Test_2();
-            _tests.MaximumSumOfConsecutiveNumbers_v1_Test_1();
-            _tests.MaximumSumOfConsecutiveNumbers_v1_Test_2();
-            _tests.MaximumSumOfConsecutiveNumbers_v2_Test_1();
-            _tests.MaximumSumOfConsecutiveNumbers_v2_Test_2();
-            _tests.MaximumSumOfConsecutiveNumbers_v1_Test_2();
-            _tests.DisplayWindow_v3_Test_1();
-            _tests.MatrixFromWindows_Test_1();
-            _tests.SumOfEachWindow_Test_1();
-            _tests.MinimumOfEachSubarraySlidingWindow_Test_1();
+            // _tests.CountGoodSubstrings_v1_Test();
+            // _tests.CountGoodSubstrings_v2_Test();
+            // _tests.PairThatContainsMinimumElementInArray_Test();
+            // _tests.MaximumSumOfConsecutiveNumbersBruteForce_Test_1();
+            // _tests.MaximumSumOfConsecutiveNumbersBruteForce_Test_2();
+            // _tests.MaximumSumOfConsecutiveNumbers_v1_Test_1();
+            // _tests.MaximumSumOfConsecutiveNumbers_v1_Test_2();
+            // _tests.MaximumSumOfConsecutiveNumbers_v2_Test_1();
+            // _tests.MaximumSumOfConsecutiveNumbers_v2_Test_2();
+            // _tests.MaximumSumOfConsecutiveNumbers_v1_Test_2();
+            // _tests.DisplayWindow_v3_Test_1();
+            // _tests.MatrixFromWindows_Test_1();
+            // _tests.SumOfEachWindow_Test_1();
+            // _tests.MinimumOfEachSubarraySlidingWindow_Test_1();
+            // _tests.ContainsNearbyDuplicate_Test();
+            // _tests.FindMaxAverage_Test();
+            // _tests.CountGoodSubstrings_Test();
+            // _tests.DivisorSubstrings_Test();
+            // _tests.NumOfSubarrays_Test();
+            // _tests.MinimumRecolors_Test();
+            // _tests.NumberOfSubstrings_Test();
+            _tests.LongestOnes_Test();
         }
     }
 }

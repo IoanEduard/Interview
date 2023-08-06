@@ -1,0 +1,115 @@
+const inputArray = [
+    "24 29 38 5 25 35",
+    "36 27 23 14 38 43",
+    "19 33 39 18 30 26",
+    "17 25 32 29 18 49",
+    "47 45 40 1 30 24",
+    "18 11 29 36 10 35",
+    "44 10 2 6 31 23",
+    "31 3 24 12 23 7",
+    "40 29 2 10 18 37",
+    "30 12 25 10 1 37",
+    "13 21 17 9 42 43",
+    "16 30 2 9 25 1",
+    "24 38 18 6 25 2",
+    "6 41 47 15 2 24",
+    "16 22 18 32 48 1",
+    "22 40 45 5 20 44",
+    "5 18 49 34 31 40",
+    "25 27 9 13 37 7",
+    "36 6 29 10 20 23",
+    "7 18 22 30 33 12",
+    "31 20 9 25 15 2",
+    "13 35 18 28 10 47",
+    "21 41 31 14 2 43",
+    "45 49 12 40 10 41",
+    "19 18 31 10 5 17",
+    "44 48 21 10 27 17",
+    "47 31 8 36 26 27",
+    "14 43 10 45 30 6",
+    "39 31 24 38 3 43",
+    "48 39 21 27 30 9",
+    "2 12 27 15 16 9",
+    "16 35 37 27 5 18",
+    "20 4 25 23 26 34",
+    "10 28 6 30 11 33",
+    "9 32 17 6 41 11",
+    "18 40 5 46 49 23",
+    "21 38 26 24 12 20",
+    "17 48 40 23 36 2",
+    "39 35 38 10 4 43",
+    "10 24 6 3 8 14",
+    "17 8 27 38 29 25",
+    "32 17 7 48 46 27",
+    "1 23 18 49 42 29",
+    "22 40 10 7 14 11",
+    "42 44 19 28 26 13",
+    "10 43 9 20 21 44",
+    "35 33 27 10 46 43",
+    "28 42 8 1 25 46",
+    "28 26 9 2 48 5",
+    "36 24 21 22 31 35",
+    "36 13 19 37 27 38",
+    "6 39 42 5 34 13",
+    "15 23 18 34 11 41",
+    "7 39 31 12 25 35",
+    "26 10 20 41 16 13",
+    "22 32 33 41 44 19",
+    "47 34 38 9 39 30",
+    "6 11 32 17 15 7",
+    "45 6 24 5 39 44",
+    "25 10 8 44 23 28",
+    "22 8 27 3 41 11",
+    "12 36 34 38 41 40",
+    "10 29 37 49 26 42",
+    "2 43 26 16 38 32",
+    "30 24 23 29 41 18",
+    "20 16 13 35 25 19",
+    "10 12 27 49 15 21",
+    "40 33 36 35 43 4",
+    "49 8 48 5 11 19",
+    "25 20 11 49 34 27",
+    "8 40 30 35 18 7",
+    "7 31 9 13 8 3",
+    "46 38 39 22 3 5",
+    "7 2 13 19 46 24",
+    "8 2 32 9 39 6",
+    "18 17 28 39 15 43",
+    "42 24 16 48 5 4",
+    "19 42 41 18 34 28",
+    "44 38 10 11 24 21",
+    "49 24 47 18 40 10",
+    "46 20 37 25 32 8",
+    "45 12 26 11 44 37",
+    "32 3 7 40 37 14",
+    "41 13 27 48 23 29",
+    "49 33 23 16 10 7",
+    "21 41 1 26 7 29",
+    "40 12 29 16 48 47",
+    "46 3 18 16 48 32",
+    "46 29 3 33 40 26",
+    "46 28 48 7 3 14",
+    "13 42 40 14 37 23",
+    "29 12 23 42 27 10",
+    "7 26 5 48 49 25",
+    "44 36 29 25 34 14"
+];
+
+import { writeArrayToFile } from './writeArrayToFile.js';
+import { convertArrayToJSON } from './convertArrayToJSON.js';
+import { getNumberFrequency } from './getNumberFrequency.js';
+import { calculateDeltaNumbers } from './calculateDeltaNumbers.js';
+
+const year = 2022;
+const formattedNumbersPath = `../generated-files/${year}_output-numbers.json`;
+const numbersFrequencyPath = `../generated-files/${year}_output-numbers-frequency.json`;
+const outputDeltaNumbers = `../generated-files/${year}_output-delta-numbers.json`;
+
+const outputArray = convertArrayToJSON(inputArray);
+writeArrayToFile(outputArray, formattedNumbersPath);
+
+const outFrequency = getNumberFrequency(outputArray);
+writeArrayToFile(outFrequency, numbersFrequencyPath);
+
+const deltaNumbers = calculateDeltaNumbers(outputArray);
+writeArrayToFile(deltaNumbers, outputDeltaNumbers);

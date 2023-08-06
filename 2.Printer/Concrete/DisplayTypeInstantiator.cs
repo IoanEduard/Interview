@@ -10,6 +10,7 @@ namespace _2.Printer.Concrete
         public IDisplay<string> DisplayString { get; set; }
         public IDisplay<char> DisplayChar { get; set; }
         public IDisplay<int> DisplayInteger { get; set; }
+        public IDisplay<double> DisplayDouble { get; set; }
         // public IDisplay<int[]> DisplayIntegerArray { get; set; }
         // public IDisplay<int[][]> DisplayIntegerMatrix { get; set; }
         public IDisplay<TreeNode> DisplayTreeNode { get; set; }
@@ -21,6 +22,7 @@ namespace _2.Printer.Concrete
             DisplayString = new Display<string>();
             DisplayChar = new Display<char>();
             DisplayInteger = new Display<int>();
+            DisplayDouble = new Display<double>();
             // DisplayIntegerArray = new Display<int[]>();
             // DisplayIntegerMatrix = new Display<int[][]>();
             DisplayTreeNode = new Display<TreeNode>();

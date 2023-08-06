@@ -1,0 +1,165 @@
+A quick note about Max course
+
+24.Prompt Elements
+Role -> Goal 
+
+Role (optional): Who is chatgpt, experienced twitter user that writes enganging tweets
+Goal: Tweet about hiking
+Constraints & Extra Information (Recommended): Tweet should use emojis and highlight advantaces of hiking
+
+Its all about providing helpful context
+
+25.
+Follow up messages to refine the responses, it takes in account the entire message history
+
+26. Context
+short focused sentences
+impotant keywords, avoid unnecesary Information
+define target audience
+control tone, style, length of the output
+output format(text, json, code)
+
+32. Zero- One- few-shot prompting
+
+Provide examples can help fine-tune the result tone, style & content
+
+Zero-shot
+- provide no examples
+
+One-shot
+
+Write something.... 
+Here is an example....
+
+Multiple-shot
+Write a tweet about something...
+Here you have some examples...
+
+33. Output Templates
+- formating personal template so the chatgpt outputs in the desired format
+
+34. cues hints
+how it should start its response, like a bullet list, completing text provided
+
+35. 
+use separators between instructions and content
+
+36. ask before answer prompting
+Role goal Constraints & Information + telling chatgpt to ask extra information to produce a better answer
+
+37. Perspective prompting
+
+let chatgpt assume different perspectives
+e.g: going on a trip, as a tourist, geologist, camping
+   Plan a trip in the alps
+   Plan a trip in the alps as a geologist student
+
+38. Exercises
+
+Create a modern, minimal cv website showing your image and below that a list of your working experience and skills
+Define structure target output html Constraints
+
+Write a newsletter email that mentions two new posts on your ebsite
+Use Ask-Before-Answer prompting
+
+Use python & javascript to encode input text (and out that text) by shifting every character to the left
+Perspective prompting
+
+Foundation gained:
+Goal + Context
+
+42. Contextual prompting
+Just elaborate the question so you give good hints for what the chatgpt algo should look after
+cultural, historical, situational
+
+43. Emotional state or tone prompring
+Write an email response for a bitch angry customer and have an emotional technique 
+
+44 Laddering prompts
+Split problems just like you would do for yourself.
+
+45.
+give me top 10 useful chatgpt prompting techniques
+
+46.
+tell chatgpt for asking for more information
+
+47
+ask chatgpt to improve itself and be self critical
+
+48.
+Split problems in multiple problems 
+
+49.
+
+50.
+search nice prompts for chatgpt
+https://github.com/f/awesome-chatgpt-prompts
+
+
+51.
+CAN DAN prompts
+
+Conclusion 
+good prompts = good results duh
+goal + context
+role + goal + Constraints
+short focused sentences
+important keywords and avoid unnecessary information
+define the target audience
+control tone style length
+control output format
+
+zero- one- few shot prompting.
+Extra examples or templates for the prompts
+ask-before-answer prompting
+
+perspective prompting
+chatgpt self evaluating
+example prompts 
+example technique prompts
+
+chatgpt is a starting point but we can adjust with critical thinking.
+
+MODULE 5
+53. Some practical implementations
+researching, summarizing & translating information
+proofreading, improving & enhancing text
+creating simple utility tools with chatgpt
+
+1. researching
+Top 5 things...
+top 5 things related to x and only a title list
+we pick y result and we ask specific questions
+
+2. summarizing information
+we give a lot of text and we ask for a summary
+we can fine tunning this by asking for a strucutured summary
+
+3. translation
+we can display the paragraph by paragraph
+helping responding to rude emails
+
+4. utility tools
+rename folders with a given language
+
+
+MODULE 6 Content creation
+Constraints: 
+- Target audience
+- Topic Related keywords
+- Highlight significat - something -
+- Article length
+- Adding Images
+
+61 to 69 not important for me
+71 is helpful for writing letters and cvs
+73 and 74 is important
+
+MODULE 7 generating images in discord with midjourney bot
+MODULE 8 SEO stuff, articles and images with midjourney
+MODULE 9 Coding
+
+Generating code with and without programming experience
+debugging & optimizing code
+explaining & refactoring code

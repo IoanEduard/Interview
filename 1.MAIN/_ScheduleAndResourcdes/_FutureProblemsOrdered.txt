@@ -1,0 +1,94 @@
+
+
+
+
+
+
+
+
+
+                                                                    ORDER OF THOUGHTS
+
+
+
+
+                                                                    
+                                        Daily First Responsabilities
+                                            1. Daily LeetCode Challenge
+                                            2. LeetCode 75
+                                            3. SQL 10 problems on w3resource
+                                            4. Re-Read problems I struggled on Leetcode, explain on paper, why and how.
+                                            5. Refactor code 
+
+                                        Goals
+                                            1. Binary Search Videos, Algorithms, Algorithms, 10 problems. 
+                                            2. LinkedLists Videos, Algorithms, 10 problems.
+                                            3. Trees Videos, Algorithms, Articles, 10 problems. 
+
+Too General:
+https://zero1code.info/course/database
+
+General Linked:
+https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode
+https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns
+Run the App: https://github.com/seanprashad/leetcode-patterns/tree/main 
+https://www.piratekingdom.com/leetcode/study-guide
+https://leetcode.com/discuss/study-guide/3577200/must-do-questions-for-interviews
+
+Beginners Must Do:
+https://leetcode.com/discuss/career/448024/Topic-wise-problems-for-Beginners
+
+Real Interviews:
+https://leetcode.com/discuss/interview-question/675445/facebook-interview-experiences-all-combined-from-lc-till-date-07-jun-2020
+https://leetcode.com/studyplan/leetcode-75/
+https://intspirit.medium.com/the-most-failed-javascript-interview-questions-849664e5bee
+https://www.techinterviewhandbook.org/coding-interview-study-plan/
+https://leetcode.com/discuss/interview-question/3605127/Most-asked-DBMS-interview-questions-with-answers-or-Topic-Wise-or
+
+Articles
+
+June - https://docs.google.com/spreadsheets/d/11Rlz2AtE_zQzF6taQN3oHP5l32EVprM3c2EAF-R8BjA/edit#gid=1375555634
+Goal:  Trees, Binary Search, Sliding Window, PrefixSum, Two Pointers
+
+https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
+https://www.enjoyalgorithms.com/blog/iterative-binary-tree-traversals-using-stack
+https://leetcode.com/discuss/study-guide/3630462/Top-20-Sliding-Window-Problems-for-beginners
+https://www.geeksforgeeks.org/morris-traversal-for-preorder/
+https://faculty.cs.niu.edu/~mcmahon/CS241/Notes/Data_Structures/binary_tree_traversals.html
+https://leetcode.com/discuss/study-guide/1212004/binary-trees-study-guide
+https://leetcode.com/discuss/study-guide/1820334/Become-Master-in-Tree
+https://leetcode.com/discuss/study-guide/1337373/Tree-question-pattern-oror2021-placement
+
+Daily Routine:
+
+https://leetcode.com/studyplan/programming-skills/
+Solved:
+1.https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/ 
+2.https://leetcode.com/problems/find-the-difference/
+3.https://leetcode.com/problems/merge-strings-alternately/
+
+https://leetcode.com/studyplan/binary-search/
+https://leetcode.com/studyplan/top-interview-150/
+
+Daily Challenge - give 1h max no matter the difficulty
+3 Trees Problems
+3 Binary Search Problems
+3 Sliding Window Problems
+10 SQL problems from w3school
+1 Problem on hackerrank
+IDk yet- Open Source 
+2h max - Tutorial: React, Git, ChatGPT, later Vue and other stuff
+Personal Project 4h
+
+Sunday revisit everything, solve only daily challenge
+
+If daily challenge is Graphs, DP just copy paste, don't waste time.
+Note in the table what I did
+
+July - 
+Graphs, Sliding Window, Heap
+
+August - 
+Dynamic Porgramming
+                             
+https://leetcode.com/discuss/study-guide/3722472/mastering-sliding-window-technique-a-comprehensive-guide

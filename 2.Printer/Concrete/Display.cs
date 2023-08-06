@@ -2,6 +2,7 @@
 using System.Text;
 using _14.Trees.Concrete;
 using _2.Printer.Interfaces;
+using _7.LinkedLists.Concrete;
 using static System.Console;
 
 namespace _2.Printer.Concrete
@@ -53,6 +54,15 @@ namespace _2.Printer.Concrete
         public void DisplayResult(TreeNode treeNode)
         {
             Write($"{treeNode.val} ");
+        }
+
+        public void DisplayResult(ListNode head)
+        {
+            while (head != null)
+            {
+                WriteLine(head.val);
+                head = head.next;
+            }
         }
 
         public void DisplayResult(IList<T> treeNodes)

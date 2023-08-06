@@ -1,6 +1,8 @@
+using _5.SearchingAlgorithms.Interfaces;
+
 namespace _5.SearchingAlgorithms.Concrete.LeetCode
 {
-    public class LeetCodeBinarySearch : BinarySearch
+    public class LeetCodeBinarySearch : BinarySearch, IBinarySearchProblems
     {
         public int Search(int[] nums, int target)
         {
@@ -94,7 +96,7 @@ namespace _5.SearchingAlgorithms.Concrete.LeetCode
             return 0;
         }
 
-        public static int[] SearchRange(int[] nums, int target)
+        public static int[] SearchRange0(int[] nums, int target)
         {
             // We try to find the most rightside element first and get the pointer
             // We try to find the most leftside element because middle would be same as rightside when target found first.
@@ -216,7 +218,7 @@ namespace _5.SearchingAlgorithms.Concrete.LeetCode
 
                     for (int i = middle; i < nums.Length; i++)
                     {
-                        if (nums[i] == target) 
+                        if (nums[i] == target)
                             result.Add(i);
                         else break;
                     }
@@ -225,6 +227,210 @@ namespace _5.SearchingAlgorithms.Concrete.LeetCode
             }
 
             return result;
+        }
+
+        public int CountNegatives(int[][] grid)
+        {
+            var count = 0;
+
+            for (var i = 0; i < grid.Length; i++)
+            {
+                count += BinarySearchCountNegatives(grid[i]);
+            }
+            return count;
+        }
+
+        private int BinarySearchCountNegatives(int[] arr)
+        {
+            var left = 0;
+            var right = arr.Length - 1;
+            var mid = 0;
+
+            while (left <= right)
+            {
+                mid = left + (right - left) / 2;
+
+                // if (arr[mid] < 0)
+                //     return arr.Length - mid;
+
+                if (arr[mid] > 0)
+                    left = mid + 1;
+                else
+                    right = mid - 1;
+            }
+            return arr.Length - right;
+        }
+
+        public int[] SearchRange(int[] nums, int target)
+        {
+            var left = GetSide(nums, target, true);
+            var right = GetSide(nums, target, false);
+
+            return new int[] { right, left };
+        }
+
+        private int GetSide(int[] nums, int target, bool leftDirection)
+        {
+            var left = 0;
+            var right = nums.Length - 1;
+            var answer = -1;
+
+            while (left <= right)
+            {
+                var mid = left + (right - left) / 2;
+
+                if (nums[mid] == target)
+                {
+                    answer = leftDirection ? left = mid + 1 : right = mid - 1;
+                    answer = mid;
+                }
+                else if (nums[mid] > target)
+                    right = mid - 1;
+                else
+                    left = mid + 1;
+            }
+
+            return answer;
+        }
+
+        public bool IsPerfectSquare(int num)
+        {
+            if (num == 1) return true;
+
+            long left = 1;
+            long right = num / 2;
+
+            while (left <= right)
+            {
+                long mid = left + (right - left) / 2;
+
+                if (mid * mid == num) return true;
+                else if (mid * mid < num)
+                    left = mid + 1;
+                else
+                    right = mid - 1;
+            }
+
+            return false;
+        }
+
+        public int MySqrt(int num)
+        {
+            if (num == 0) return num;
+
+            var left = 1;
+            var right = num;
+
+            while (left <= right)
+            {
+                var mid = left + (right - left) / 2;
+
+                if (mid == num / mid) return (int)mid;
+                else if (num / mid < mid)
+                    right = mid - 1;
+                else
+                    left = mid + 1;
+            }
+
+            return (int)right;
+        }
+
+        // mathematics... not really for me
+        public int ArrangeCoins(int n)
+        {
+            long left = 1;
+            long right = n;
+
+            while (left <= right)
+            {
+                long mid = left + (right - left) / 2;
+                long current = mid * (mid + 1) / 2;
+
+                if (current == n)
+                    return (int)mid;
+                else if (current < n)
+                    left = current + 1;
+                else
+                    right = current - 1;
+                }
+
+            return (int)right;
+        }
+    }
+
+    public class TimeMap
+    {
+        Dictionary<string, List<(string value, int timestamp)>> _values;
+
+        public TimeMap()
+        {
+            _values = new Dictionary<string, List<(string, int)>>();
+        }
+
+        public void Set(string key, string value, int timestamp)
+        {
+            if (!_values.ContainsKey(key))
+                _values.Add(key, new List<(string, int)>());
+
+            _values[key].Add((value, timestamp));
+        }
+
+        public string Get(string key, int timestamp)
+        {
+            if (!_values.ContainsKey(key)) return string.Empty;
+
+            var list = _values[key];
+
+            var left = 0;
+            var right = list.Count - 1;
+
+            while (left <= right)
+            {
+                var mid = left + (right - left) / 2;
+
+                if (list[mid].timestamp == timestamp)
+                    return list[mid].value;
+                else if (list[mid].timestamp <= timestamp)
+                    left = mid + 1;
+                else
+                    right = mid - 1;
+            }
+
+            return left == 0 ? string.Empty : list[left - 1].value;
+        }
+    }
+    public class SnapshotArray
+    {
+        List<Dictionary<int, int>> _history_records;
+        int _snap = 0;
+
+        public SnapshotArray(int length)
+        {
+            _history_records = new List<Dictionary<int, int>>();
+        }
+
+        public void Set(int index, int val)
+        {
+            if (_history_records[index] == null)
+                _history_records[index] = new Dictionary<int, int>();
+
+            _history_records[index][_snap] = val;
+        }
+
+        public int Snap()
+        {
+            return _snap++;
+        }
+
+        public int Get(int index, int snap_id)
+        {
+            if (_history_records[index] == null) return 0;
+
+            while (snap_id >= 0 && !_history_records[index].ContainsKey(snap_id)) snap_id--;
+
+            if (!_history_records[index].ContainsKey(snap_id)) return 0;
+
+            return _history_records[index][snap_id];
         }
     }
 }

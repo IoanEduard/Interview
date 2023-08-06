@@ -1,0 +1,17 @@
+Is a javascript framework that makes building interactive and reactive
+web frontends
+javascript
+framework
+reactive (update the screen dynamically)
+web frontends
+
+mobile aps are instant and dynamic
+this isn't a traditional page to fetch the request for a html page
+javascript runs in the browser on the loaded page. 
+We can manipulate DOM so we don't have to send requests for html pages
+We only make requests for the data
+We can do from scratch with javascript but it isn't practical
+Vue gives a clear ruleset we can follow so we focus on business logic
+
+We don't have to control everything in a html page but we can control parts of the page
+We can control everything on a page. SPA page, server only sends one HTML page, after that VUE takes over and control the UI

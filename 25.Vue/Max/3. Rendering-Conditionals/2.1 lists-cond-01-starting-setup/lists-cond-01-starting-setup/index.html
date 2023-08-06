@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Vue Course Goals</h1>
+    </header>
+    <section id="user-goals">
+        <h2>My course goals</h2>
+        <input type="text" v-model="goal" />
+        <button @click="addGoal">Add Goal</button>
+        <!-- v-show, doesn't work with else -->
+        <!-- v-show doesn't remove from the DOM just hides them, while if removes from DOM -->
+        <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
+        <!-- <ul v-else> -->
+        <ul v-else-if="goals.length > 0">
+            <!-- key is good with id from a database, needs to be unique -->
+            <li @click="removeEl(index)" :key="goal" v-for="(goal, index) in goals">
+                <p>{{goal}} - {{index}}</p>
+                <!-- stops propagadation -->
+                <!-- reusing DOM elements cause bugs when removing the element -->
+                <input type="text" @click.stop>
+            </li>
+        </ul>
+        <p v-else>v-else</p>
+        <!-- v-for can loop through properties of an object -->
+        <!-- v-for="(value, key, index) in {prop1: 'x', prop2: 'x2'}" -->
+    </section>
+</body>
+
+</html>

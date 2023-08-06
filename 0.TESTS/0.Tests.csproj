@@ -10,6 +10,7 @@
     <ProjectReference Include="..\_LeetCode_Medium\_LeetCode_Medium.csproj" />
     <ProjectReference Include="..\14.N-ary-Trees\14.N-ary-Trees.csproj" />
     <ProjectReference Include="..\_LeetCode_Hard\_LeetCode_Hard.csproj" />
+    <ProjectReference Include="..\5.SearchingAlgorithms\5.SearchingAlgorithms.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

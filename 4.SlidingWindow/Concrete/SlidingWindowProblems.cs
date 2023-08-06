@@ -333,7 +333,7 @@ namespace _4.SlidingWindow.Concrete
             return res;
         }
 
-        public int MinimumRecolors(string blocks, int k)
+        public int MinimumRecolors0(string blocks, int k)
         {
             var recolorCount = 0;
             var minimumRecolorCount = int.MaxValue;
@@ -357,7 +357,376 @@ namespace _4.SlidingWindow.Concrete
 
             return minimumRecolorCount;
         }
-  
-        
-   }
+
+        public bool ContainsNearbyDuplicate(int[] nums, int k)
+        {
+            var hash = new HashSet<int>();
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (i > k) hash.Remove(nums[i - k - 1]);
+
+                if (hash.Contains(nums[i])) return true;
+                else hash.Add(nums[i]);
+            }
+
+            return false;
+        }
+
+        public double FindMaxAverage(int[] nums, int k)
+        {
+            double maxAvg = double.MinValue;
+            double sum = 0;
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (i > k)
+                {
+                    sum -= nums[i - k - 1];
+                    double avg = sum / (double)k;
+                    if (avg > maxAvg) maxAvg = avg;
+                }
+
+                sum += nums[i];
+            }
+
+            return maxAvg;
+        }
+
+        public int CountGoodSubstrings(string s)
+        {
+            var count = 0;
+            var k = 3;
+
+            for (var i = k - 1; i < s.Length - 1; i++)
+            {
+                if (s[i] != s[i - 1] &&
+                    s[i - k + 1] != s[i] &&
+                    s[i - k + 1] != s[i - 1])
+
+                    count++;
+            }
+
+            return count;
+        }
+
+        public int CountGoodSubstrings2(string s)
+        {
+            var count = 0;
+            var k = 3;
+
+            for (var i = 0; i < s.Length - 1; i++)
+            {
+                if (s.Substring(i, k).ToHashSet().Count == 3)
+                    count++;
+            }
+
+            return count;
+        }
+
+        public int MinimumDifference(int[] nums, int k)
+        {
+            Array.Sort(nums);
+
+            var result = int.MaxValue;
+            var currentDifference = 0;
+
+            for (var i = k - 1; i < nums.Length; i++)
+            {
+                currentDifference = nums[i] - nums[i - k + 1];
+                result = Math.Min(result, currentDifference);
+            }
+
+            return result;
+        }
+
+        public int DivisorSubstrings(int num, int k)
+        {
+            var n = num.ToString();
+            var count = 0;
+
+            for (var i = k - 1; i < n.Length; i++)
+            {
+                var number = int.Parse(n.Substring(i - k + 1, k));
+                if (number != 0 && num % number == 0) count++;
+            }
+
+            return count;
+        }
+
+        public int NumOfSubarrays(int[] arr, int k, int threshold)
+        {
+            var sum = 0;
+            var count = 0;
+
+            for (var i = 0; i < k; i++) sum += arr[i];
+            if (sum / k >= threshold) count++;
+
+            for (var i = k; i < arr.Length; i++)
+            {
+                sum += arr[i];
+                sum -= arr[i - k];
+
+                if (sum / k >= threshold)
+                    count++;
+            }
+
+            return count;
+        }
+
+        public int MinimumRecolors(string blocks, int k)
+        {
+            var minimum = int.MaxValue;
+            var currentMinimum = 0;
+
+            for (var i = 0; i < blocks.Length; i++)
+            {
+                if (blocks[i] == 'W') currentMinimum++;
+
+                if (i >= k - 1)
+                {
+                    minimum = Math.Min(currentMinimum, minimum);
+
+                    if (blocks[i - k - 1] == 'W')
+                        currentMinimum--;
+                }
+            }
+
+            return minimum;
+        }
+
+        public int NumberOfSubstrings(string s)
+        {
+            var count = 0;
+
+            var abc = new int[] { 0, 0, 0 };
+            var k = 0;
+
+            for (var i = 0; i < s.Length; i++)
+            {
+                if (s[i] == 'a') abc[0]++;
+                if (s[i] == 'b') abc[1]++;
+                if (s[i] == 'c') abc[2]++;
+
+                while (abc[0] > 0 && abc[1] > 0 && abc[2] > 0)
+                {
+                    count += s.Length - i;
+
+                    if (s[k] == 'a') abc[0]--;
+                    if (s[k] == 'b') abc[1]--;
+                    if (s[k] == 'c') abc[2]--;
+                    k++;
+                }
+            }
+
+            return count;
+        }
+
+        public int LongestOnes(int[] nums, int k)
+        {
+            var resultCount = 0;
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                var count = 0;
+                var zeroCount = nums[i] == 0 ? 1 : 0;
+
+                var j = i;
+                while (zeroCount <= k && j < nums.Length)
+                {
+                    if (nums[j] == 0)
+                        zeroCount++;
+
+                    count++;
+                    j++;
+                }
+
+                resultCount = Math.Max(count, resultCount);
+            }
+
+            return resultCount;
+        }
+
+        public int LongestSubarray(int[] nums)
+        {
+            var zeroCount = 0;
+            var longestWindow = 0;
+            var left = 0;
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 0)
+                    zeroCount++;
+
+                while (zeroCount > 1)
+                {
+                    if (nums[left] == 0)
+                        zeroCount--;
+
+                    left++;
+                }
+
+                longestWindow = Math.Max(longestWindow, i - left);
+            }
+
+            return longestWindow;
+        }
+
+        public int NumberOfSubarrays(int[] nums, int k)
+        {
+            var countOdd = 0;
+            var left = 0;
+            var countSubarrays = 0;
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] % 2 == 1)
+                    countOdd++;
+
+                if (countOdd == k)
+                {
+                    countSubarrays++;
+
+                    left++;
+                    i = left;
+                }
+            }
+
+            return countSubarrays;
+        }
+
+        // https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/solutions/2198002/c-solution-using-sliding-window/
+        public int MaxScore2(int[] cardPoints, int k)
+        {
+            var count = 0;
+
+            for (var i = 0; i < k; i++)
+                count += cardPoints[i];
+
+            var current = count;
+            for (var i = k - 1; i >= 0; i--)
+            {
+                current -= cardPoints[i];
+                current += cardPoints[cardPoints.Length - k + i];
+
+                count = Math.Max(current, count);
+            }
+
+            return count;
+        }
+
+        public int MinimumCardPickup(int[] cards)
+        {
+            var dict = new Dictionary<int, int>();
+            var toReturn = int.MaxValue;
+
+            for (var i = 0; i < cards.Length; i++)
+            {
+                if (dict.ContainsKey(cards[i]))
+                {
+                    var distance = i - dict[cards[i]] + 1;
+                    toReturn = Math.Min(distance, toReturn);
+                    dict[cards[i]] = i;
+                }
+                else dict.Add(cards[i], i);
+            }
+
+            return toReturn == int.MaxValue ? -1 : toReturn;
+        }
+
+        public IList<int> FindAnagrams(string s, string p)
+        {
+            var result = new List<int>();
+
+            var s_frequency = new int[26];
+            var p_frequency = new int[26];
+
+            foreach (var c in p)
+                p_frequency[c - 'a']++;
+
+            for (var i = 0; i < s.Length; i++)
+            {
+                s_frequency[s[i] - 'a']++;
+                if (i - p.Length >= 0)
+                    s_frequency[s[i] - 'a']--;
+
+                if (i >= p.Length - 1 && isAnagram(s_frequency, p_frequency))
+                    result.Add(i - (p.Length - 1));
+            }
+            return result;
+        }
+
+        private bool isAnagram(int[] s_frequency, int[] p_frequency)
+        {
+            for (int i = 0; i < s_frequency.Length; i++)
+                if (s_frequency[i] != p_frequency[i])
+                    return false;
+
+            return true;
+        }
+
+        public int MaxVowels(string s, int k)
+        {
+            var vowels = new HashSet<char> {
+            'a', 'e', 'i', 'o', 'u'
+        };
+
+            var count = 0;
+
+            for (var i = 0; i < k; i++)
+                if (vowels.Contains(s[i]))
+                    count++;
+
+            var maxVowel = count;
+
+            for (var i = k; i < s.Length; i++)
+            {
+                if (vowels.Contains(s[i - k])) count--;
+                if (vowels.Contains(s[i])) count++;
+
+                maxVowel = Math.Max(count, maxVowel);
+            }
+
+            return maxVowel;
+        }
+    }
+
+    /* GOAL 25-28 JULY - SLIDING WINDOW
+  😉 1 https://leetcode.com/problems/contains-duplicate-ii/
+  😉 2 https://leetcode.com/problems/maximum-average-subarray-i/
+  ❌ 3 https://leetcode.com/problems/longest-nice-substring/
+  😉 4 https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
+  🤡 5 https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/
+  😉 6 https://leetcode.com/problems/find-the-k-beauty-of-a-number/
+  😉 7 https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/
+  🤡 9 https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/
+  10 https://leetcode.com/problems/maximize-the-confusion-of-an-exam/
+  🤡 11 https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
+  🤡 12 https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
+  ❌ 13 https://leetcode.com/problems/max-consecutive-ones-iii/
+  ❌ 14 https://leetcode.com/problems/count-number-of-nice-subarrays/
+  ❌ 15 https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/
+  😉 16 https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
+   17 https://leetcode.com/problems/maximum-erasure-value/
+  ❌ DON'T UNDERSTAND THE TEXT !! 18 https://leetcode.com/problems/grumpy-bookstore-owner/
+  ❌FUCK❌ 20 https://leetcode.com/problems/longest-repeating-character-replacement/
+  🤡 21 https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
+  ❌ 22 https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/
+  ❌ 23 https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/
+  😉 25 https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/
+  🤡 26 https://leetcode.com/problems/find-all-anagrams-in-a-string/
+
+    Binary search problem ❌ 8 https://leetcode.com/problems/peak-index-in-a-mountain-array/
+    DP problem ❌ 24 https://leetcode.com/problems/maximum-length-of-repeated-subarray/
+    Prefix Sum ❌19 https://leetcode.com/problems/binary-subarrays-with-sum/
+
+Explain code on paper afterwards, each o
+    end with this: https://leetcode.com/discuss/study-guide/3722472/mastering-sliding-window-technique-a-comprehensive-guide
+    
+    AND SQL 2h a day
+    7-26 reach 15th question
+    Do SQL beginner part till JOIN
+    */
+
+
 }

@@ -89,11 +89,17 @@ namespace _4.SlidingWindow.Interfaces
         /// <param name="k"></param>
         /// <returns></returns>
         int[] SumOfEachWindow(int[] arr, int k);
-
         int MinimumOfEachSubarraySlidingWindow(int[] arr, int k);
-
         int MaxScore(int[] cardPoints, int k);
         int MaxScoreLeetCodeSolution(int[] cardPoints, int k);
         int MinimumRecolors(string blocks, int k);
+        bool ContainsNearbyDuplicate(int[] array, int k);
+        double FindMaxAverage(int[] array, int k);
+        int CountGoodSubstrings(string s);
+        int MinimumDifference(int[] nums, int k);
+         int DivisorSubstrings(int num, int k);
+         int NumOfSubarrays(int[] arr, int k, int threshold);
+         int NumberOfSubstrings(string s);
+         int LongestOnes(int[] nums, int k);
     }
 }
